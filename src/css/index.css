@@ -72,6 +72,54 @@ h6 { font-size: 12px; color: #444460; }
 
 #j_main .j_Brand .ul_2 .h5_3 { padding: 10px 0 33px 95px; }
 
-#j_main .j_Best { width: 1290px; height: 350px; background: #F0F0E1; }
+#j_main .j_Best { width: 1290px; height: 350px; }
 
-#j_main .j_images { width: 1290px; height: 342px; background: pink; }
+#j_main .j_Best .Best_p { line-height: 38px; font-weight: bold; border-bottom: 2px solid #464637; margin: 0 60px; }
+
+#j_main .j_Best .Best_l { width: 25px; height: 310px; margin-left: 60px; position: relative; }
+
+#j_main .j_Best .Best_l .Best_i1 { position: absolute; left: -7px; top: 140px; font-size: 30px; color: #999999; }
+
+#j_main .j_Best .Best_c { width: 1120px; height: 310px; color: #555555; }
+
+#j_main .j_Best .Best_c .Best_ul li { float: left; }
+
+#j_main .j_Best .Best_c .Best_ul li img { display: block; width: 120px; height: 120px; margin: 30px 22px 0px 0px; }
+
+#j_main .j_Best .Best_c .Best_ul li .img_last { display: block; width: 120px; height: 120px; margin: 30px 0px 0px 5px; }
+
+#j_main .j_Best .Best_c .Best_ul li p { font-size: 8px; }
+
+#j_main .j_Best .Best_c .Best_ul li .Best_ul_p1 { font-size: 11px; font-weight: bold; line-height: 30px; padding-top: 10px; }
+
+#j_main .j_Best .Best_c .Best_ul li p:nth-child(5) { margin-top: 15px; }
+
+#j_main .j_Best .Best_c .Best_ul li .Best_ul_p5 { color: #AF0000; }
+
+#j_main .j_Best .Best_c .Best_ul li .p_last { position: relative; }
+
+#j_main .j_Best .Best_c .Best_ul li .p_last i { position: absolute; color: #303030; font-size: 18px; }
+
+#j_main .j_Best .Best_c .Best_ul li .p_last .Best_c_i1 { top: 3px; left: 83px; font-weight: bold; }
+
+#j_main .j_Best .Best_c .Best_ul li .p_last .Best_c_i2 { top: 3px; left: 108px; }
+
+#j_main .j_Best .Best_r { width: 25px; height: 310px; margin-right: 60px; position: relative; }
+
+#j_main .j_Best .Best_r .Best_i2 { position: absolute; left: 2px; top: 140px; font-size: 32px; color: #999999; }
+
+#j_main .j_images { width: 1290px; height: 342px; }
+
+#j_main .j_images .span { display: inline-block; width: 20px; height: 20px; border-radius: 50%; }
+
+#j_main .j_images .images_s1 { display: inline-block; background: #666666; margin-left: 615px; margin-right: 10px; }
+
+#j_main .j_images .images_s2 { display: inline-block; background: #999999; }
+
+#j_main .j_images .images_rq { text-align: center; }
+
+#j_main .j_images .images_rq .images_p1 { line-height: 31px; font-size: 13px; font-weight: bold; color: #333333; }
+
+#j_main .j_images .images_rq p { font-size: 12px; line-height: 20px; color: #777777; }
+
+#j_main .j_images .images_rq .images_p4 { padding-bottom: 12px; }
