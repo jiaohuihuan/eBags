@@ -29,39 +29,94 @@ h3{font-size:map-get($headings,h3)}
         background: #F0F0E1;
         margin-top: 13px;
     }
+    
+    //轮播图样式
     .banner img{display: block;}
     .banner{position:relative;width:1300px;height:314px;overflow:hidden;}
     .banner ul{position:absolute;overflow:hidden;}
     .banner ul li{float:left;}
-    .banner .page{position:absolute;right:575px;bottom:0;padding:10px;}
+    .banner .page{position:absolute;right:545px;bottom:0;padding:10px;}
     .banner .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
     .banner .page span.active{background-color: rgba(255,0,0,.8);}
 
     .banner > span{display:none;position:absolute;left:0;top:50%;transform: translate(0,-50%);padding:50px 16px;background-color: rgba(0,0,0,0.1);color:#fff;}
     .banner .btn-next{left:auto;right:0;}
-    .banner &lt; span:hover{background-color: rgba(0,0,0,0.25);}
+    .banner > span:hover{background-color: rgba(0,0,0,0.25);}
     .banner:hover > span{display: block;}
-
-
-
-
+    //轮播图样式结束
 
 
     .j_Trave{
         width: 1290px;
-        height: 445px;
-        background: pink;
+        // height: 445px;
+        padding: 50px 0 0 60px;
+        .Trave_img{
+            display:block;
+            width: 1195px;
+            height: 395px;
+        }
     }
+
     .j_BUS{
         width: 1290px;
-        height: 453px;
-        background: #F0F0E1;
+        // height: 453px;
+        // background: #F0F0E1;
+        padding: 50px 0 0 102px;
+        .BUS_img{
+            display:block;
+            width: 1085px;
+            height: 403px;
+        }
     }
     .j_Brand{
         width: 1290px;
-        height: 737px;
-        background: pink;
+        // height: 737px;
+        // background: pink;
+        .Brand_h3{
+            padding: 55px 0 20px 504px;
+        }
+        .Brand_ul{
+            height: 283px;
+            img{
+                width: 370px;
+                height: 222px;
+            }
+            li{
+                float:left;
+            }
+            li:nth-child(1){
+                padding-left:60px;
+            }
+            li:nth-child(2){
+                padding:0 30px;
+            }
+            li:nth-child(3){
+                padding-right:60px;
+            }
+            h5{
+                padding: 10px 0 33px 103px;
+            }
+        }
+        .ul_2{
+            margin-bottom: 67px;
+            .h5_1{
+                padding: 10px 0 33px 43px;
+            }
+            .h5_2{
+                padding: 10px 0 33px 36px;
+            }
+            .h5_3{
+                padding: 10px 0 33px 95px;
+            }
+        }
     }
+
+
+
+
+
+
+
     .j_Best{
         width: 1290px;
         height: 350px;

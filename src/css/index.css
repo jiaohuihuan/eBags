@@ -24,7 +24,7 @@ h6 { font-size: 12px; color: #444460; }
 
 #j_main .banner ul li { float: left; }
 
-#j_main .banner .page { position: absolute; right: 575px; bottom: 0; padding: 10px; }
+#j_main .banner .page { position: absolute; right: 545px; bottom: 0; padding: 10px; }
 
 #j_main .banner .page span { display: inline-block; margin: 0 5px; width: 30px; height: 30px; line-height: 30px; background-color: rgba(0, 0, 0, 0.6); text-align: center; color: #fff; border-radius: 50%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
@@ -38,11 +38,39 @@ h6 { font-size: 12px; color: #444460; }
 
 #j_main .banner:hover > span { display: block; }
 
-#j_main .j_Trave { width: 1290px; height: 445px; background: pink; }
+#j_main .j_Trave { width: 1290px; padding: 50px 0 0 60px; }
 
-#j_main .j_BUS { width: 1290px; height: 453px; background: #F0F0E1; }
+#j_main .j_Trave .Trave_img { display: block; width: 1195px; height: 395px; }
 
-#j_main .j_Brand { width: 1290px; height: 737px; background: pink; }
+#j_main .j_BUS { width: 1290px; padding: 50px 0 0 102px; }
+
+#j_main .j_BUS .BUS_img { display: block; width: 1085px; height: 403px; }
+
+#j_main .j_Brand { width: 1290px; }
+
+#j_main .j_Brand .Brand_h3 { padding: 55px 0 20px 504px; }
+
+#j_main .j_Brand .Brand_ul { height: 283px; }
+
+#j_main .j_Brand .Brand_ul img { width: 370px; height: 222px; }
+
+#j_main .j_Brand .Brand_ul li { float: left; }
+
+#j_main .j_Brand .Brand_ul li:nth-child(1) { padding-left: 60px; }
+
+#j_main .j_Brand .Brand_ul li:nth-child(2) { padding: 0 30px; }
+
+#j_main .j_Brand .Brand_ul li:nth-child(3) { padding-right: 60px; }
+
+#j_main .j_Brand .Brand_ul h5 { padding: 10px 0 33px 103px; }
+
+#j_main .j_Brand .ul_2 { margin-bottom: 67px; }
+
+#j_main .j_Brand .ul_2 .h5_1 { padding: 10px 0 33px 43px; }
+
+#j_main .j_Brand .ul_2 .h5_2 { padding: 10px 0 33px 36px; }
+
+#j_main .j_Brand .ul_2 .h5_3 { padding: 10px 0 33px 95px; }
 
 #j_main .j_Best { width: 1290px; height: 350px; background: #F0F0E1; }
 
