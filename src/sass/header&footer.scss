@@ -123,6 +123,7 @@ $padding-left:35px;
                     top: 60px;
                     left:0px;
                     border:1px solid #F2F0F1;
+                    z-index:1000;
                     border-top:none;
                     .ul1,.ul2,.ul3{
                         color:nth($color,2);
@@ -161,10 +162,6 @@ $padding-left:35px;
             .sale{
                 color:#D90000;
             }
-            // li:hover{
-            //     // border:1px solid #F2F0F1;
-            //     border-bottom:1px solid red;
-            // }
 
         }
     }
@@ -178,7 +175,7 @@ $padding-left:35px;
     .j_num{
         height: 170px;
         // background: skyblue;
-        border-top:1px solid #ccc;
+        border-top:1px solid #F2F0F1;
         color:#79796A;
         font-size: 22px;
         padding: 113px 0 0 220px;

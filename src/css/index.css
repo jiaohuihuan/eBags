@@ -1,0 +1,49 @@
+body { margin: 0; padding: 0; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+a:hover { text-decoration: underline; }
+
+h3 { font-size: 1.2em; }
+
+h3 { font-size: 30px; color: #444460; }
+
+h4 { font-size: 24px; color: #444460; }
+
+h5 { font-size: 18px; color: #444460; }
+
+h6 { font-size: 12px; color: #444460; }
+
+#j_main .banner { width: 100%; height: 350px; background: #F0F0E1; margin-top: 13px; }
+
+#j_main .banner img { display: block; }
+
+#j_main .banner { position: relative; width: 1300px; height: 314px; overflow: hidden; }
+
+#j_main .banner ul { position: absolute; overflow: hidden; }
+
+#j_main .banner ul li { float: left; }
+
+#j_main .banner .page { position: absolute; right: 575px; bottom: 0; padding: 10px; }
+
+#j_main .banner .page span { display: inline-block; margin: 0 5px; width: 30px; height: 30px; line-height: 30px; background-color: rgba(0, 0, 0, 0.6); text-align: center; color: #fff; border-radius: 50%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+#j_main .banner .page span.active { background-color: rgba(255, 0, 0, 0.8); }
+
+#j_main .banner > span { display: none; position: absolute; left: 0; top: 50%; transform: translate(0, -50%); padding: 50px 16px; background-color: rgba(0, 0, 0, 0.1); color: #fff; }
+
+#j_main .banner .btn-next { left: auto; right: 0; }
+
+#j_main .banner > span:hover { background-color: rgba(0, 0, 0, 0.25); }
+
+#j_main .banner:hover > span { display: block; }
+
+#j_main .j_Trave { width: 1290px; height: 445px; background: pink; }
+
+#j_main .j_BUS { width: 1290px; height: 453px; background: #F0F0E1; }
+
+#j_main .j_Brand { width: 1290px; height: 737px; background: pink; }
+
+#j_main .j_Best { width: 1290px; height: 350px; background: #F0F0E1; }
+
+#j_main .j_images { width: 1290px; height: 342px; background: pink; }

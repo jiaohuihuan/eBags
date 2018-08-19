@@ -1,0 +1,75 @@
+body{margin:0;padding:0;}
+ul{list-style:none;padding:0;margin:0;}
+
+      //价格    字体
+$color:#990000 #555555;
+$font-size:12px;
+
+// map类型
+$headings: (h1: 2em, h2: 1.5em, h3: 1.2em);
+
+a:hover{text-decoration:underline;}
+
+
+// 使用
+h3{font-size:map-get($headings,h3)}
+
+@for $i from 3 to 7{
+    h#{$i}{
+        font-size:48px-$i*6;color:#444460;
+    }
+}
+
+
+
+#j_main{
+    .banner{
+        width: 100%;
+        height: 350px;
+        background: #F0F0E1;
+        margin-top: 13px;
+    }
+    .banner img{display: block;}
+    .banner{position:relative;width:1300px;height:314px;overflow:hidden;}
+    .banner ul{position:absolute;overflow:hidden;}
+    .banner ul li{float:left;}
+    .banner .page{position:absolute;right:575px;bottom:0;padding:10px;}
+    .banner .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
+    .banner .page span.active{background-color: rgba(255,0,0,.8);}
+
+    .banner > span{display:none;position:absolute;left:0;top:50%;transform: translate(0,-50%);padding:50px 16px;background-color: rgba(0,0,0,0.1);color:#fff;}
+    .banner .btn-next{left:auto;right:0;}
+    .banner &lt; span:hover{background-color: rgba(0,0,0,0.25);}
+    .banner:hover > span{display: block;}
+
+
+
+
+
+
+    .j_Trave{
+        width: 1290px;
+        height: 445px;
+        background: pink;
+    }
+    .j_BUS{
+        width: 1290px;
+        height: 453px;
+        background: #F0F0E1;
+    }
+    .j_Brand{
+        width: 1290px;
+        height: 737px;
+        background: pink;
+    }
+    .j_Best{
+        width: 1290px;
+        height: 350px;
+        background: #F0F0E1;
+    }
+    .j_images{
+        width: 1290px;
+        height: 342px;
+        background: pink;
+    }
+}
