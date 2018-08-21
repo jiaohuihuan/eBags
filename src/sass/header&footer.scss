@@ -13,7 +13,7 @@ $line-height: 24px;
 a{$color:#333;}
 a:hover{text-decoration:underline;}
 
-$padding:16px 30px;
+$padding:15px 30px;
 $padding-top:15px;
 $padding-right:35px;
 $padding-bottom:15px;
@@ -125,6 +125,7 @@ $padding-left:35px;
                     border:1px solid #F2F0F1;
                     z-index:1000;
                     border-top:none;
+                    box-shadow:0px 3px  10px 2px #eee;
                     .ul1,.ul2,.ul3{
                         color:nth($color,2);
                         font-weight: normal;
@@ -153,8 +154,9 @@ $padding-left:35px;
             }
             .li_nav:hover{
                 color:#0059B2;
+                background: #F8F8F8 ;
                 border:1px solid #F2F0F1;
-                border-bottom:10px solid #fff;
+                border-bottom:2px solid #fff;
             }
             .li_nav:hover .box{
                 display:block;
@@ -246,7 +248,7 @@ $padding-left:35px;
             padding: 15px 0 0 428px;
         }
         .bottom_img{
-            padding: 52px 0 0 527px;
+            padding: 52px 0 0 570px;
         }
     }
 }

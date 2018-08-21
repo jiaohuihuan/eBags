@@ -1,0 +1,278 @@
+#main{
+    .container{
+        width: 1140px;
+        height: 887px;
+        .j_reg_l{
+            width: 760px;
+            // height: 887px;
+            // background: pink;
+            padding: 0 24px 0 15px;
+            .safe{
+                position:relative;
+                height: 107px;
+                padding-top: 12px;
+                border-bottom:1px solid #E1E1E1;
+                .lock{
+                    position:absolute;
+                    top: 14px;
+                    left:14px;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                .safe_s1{
+                    font-size: 22px;
+                    margin-left:43px;
+                }
+                .safe_s2{
+                    font-size: 14px;
+                    color:#717171;
+                }
+                .s3{
+                    padding-left:286px;
+                }
+                p{
+                    color:#777777;
+                    font-size: 12px;
+                    padding: 30px 0 0 15px;
+                    .s4{
+                        color:#659DD7;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .zhuce{
+                height: 360px;
+                // background: skyblue;
+                .jhuo{
+                    height: 48px;
+                    .jhuo_s1{
+                        display:inline-block;
+                        width: 23px;
+                        height: 23px;
+                        border-radius:50%;
+                        background: #000;
+                        font-weight: bold;
+                        color:#fff;
+                        margin-top: 15px;
+                        position:relative;
+                        .jhuo_s2{
+                            position:absolute;
+                            top: 0px;
+                            left: 6px;
+                        }
+                    }
+                    .jhuo_s3{
+                        font-size: 18px;
+                        padding-bottom: 15px;
+                    }
+                }
+                input{
+                    height: 40px;
+                    border:1px solid #D5C5C0;
+                    margin-bottom: 22px;
+                    border-radius:5px;
+                }
+                .mag{
+                    width: 723px;
+                }
+                .mag_1{
+                    width: 347px;
+                }
+                .mag_l{
+                    margin-right: 27px;
+                }
+            }
+
+
+
+            .peisong{
+                height: 264px;
+                // background: #eee;
+                .bt{
+                    height: 38px;
+                    background: #F8F8F8;
+                    font-size: 14px;
+                    line-height: 38px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    span:nth-child(1){
+                        padding-left: 70px;
+                    }
+                    span:nth-child(2){
+                        padding-left: 196px;
+                    }
+                    span:nth-child(3){
+                        padding-left: 122px;
+                    }
+                }
+                .radio{
+                    margin-left: 31px;
+                }
+                .pos{
+                    line-height: 48px;
+                    .s1{
+                        padding-left: 20px;
+                    }
+                    .s2{
+                        padding-left: 205px;
+                    }
+                    .s3{
+                        padding-left: 98px;
+                    }
+                }
+                .sta{
+                    line-height: 48px;
+                    .s1{
+                        padding-left: 20px;
+                    }
+                    .s2{
+                        padding-left: 188px;
+                    }
+                    .s3{
+                        padding-left: 99px;
+                        color:#2A9DCC;
+                    }
+                }
+                .dhl{
+                    line-height: 48px;
+                    .s1{
+                        padding-left: 20px;
+                    }
+                    .s2{
+                        padding-left: 171px;
+                    }
+                    .s3{
+                        padding-left: 108px;
+                        color:#2A9DCC;
+                    }
+                }
+                .jx{
+                    width: 345px;
+                    height: 40px;
+                    background: #404040;
+                    border-radius:5px;
+                    margin: 10px 0 0 188px;
+                    text-align: center; 
+                    span{
+                        line-height: 40px;
+                        color:#fff;
+
+                    }
+                }
+            }
+
+
+            .fukuan{
+                height: 140px;
+                // background: skyblue;
+                .fukuan_t{
+                    border-top:1px solid #E1E1E1;
+                    border-bottom:1px solid #E1E1E1;
+                     .fukuan_s1{
+                            display:inline-block;
+                            width: 23px;
+                            height: 23px;
+                            border-radius:50%;
+                            background: #000;
+                            font-weight: bold;
+                            color:#fff;
+                            margin-top: 15px;
+                            position:relative;
+                            .fukuan_s2{
+                                position:absolute;
+                                top: 0px;
+                                left: 6px;
+                            }
+                        }
+                        .fukuan_s3{
+                            font-size: 18px;
+                            padding-bottom: 15px;
+                        }
+                }
+                .fukuan_b{
+                    font-size: 12px;
+                    color:#999999;
+                    text-align: center;
+                    padding-top: 40px;
+                }
+            }
+        }
+
+
+
+        .j_reg_r{
+            width: 380px;
+            height: 887px;
+            background: #F4F4F4;
+            .content{
+                padding: 0 22px;
+                .indent{
+                    width: 380px;
+                    height: 72px;
+                    // background: skyblue;
+                    position:relative;
+                    padding-top: 17px;
+                    .indent_i{
+                        font-size: 26px;
+                        position:absolute;
+                        top: 14px;
+                        left:0px;
+                    }
+                    .indent_s1{
+                        font-size: 20px;
+                        padding-left:33px;
+                    }
+                }
+                .sum{
+                    height: 295px;
+                    width: 335px;
+                    // background: pink;
+                    .continue{
+                        height: 40px;
+                        background: #3D3D3D;
+                        border-radius:5px;
+                        text-align: center;
+                        .continue_s1{
+                            font-size: 14px;
+                            color:#FCFCFC;
+                            line-height: 40px;
+                        }
+                    }
+                    p{
+                        overflow:hidden;
+                        span:nth-child(2){
+                            float:right;
+                        }
+                        span{
+                            font-size: 12px;
+                            line-height: 36px;
+                        }
+                    }
+                    .last_p{
+                        font-size: 20px;
+                        font-weight: bold;
+                        line-height: 46px;
+                        height: 46px;
+                    }
+                    .sale{
+                        height: 64px;
+                        margin-top: 21px;
+                        border-top:1px solid #C0C0C0;
+                        .sale_s{
+                            font-size: 12px;
+                            color:#629DCF;
+                            line-height: 43px;
+                            padding-left: 14px;
+
+                        }
+                    }
+                    .num{
+                        border-top:1px solid #C0C0C0;
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+}

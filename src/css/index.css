@@ -80,7 +80,9 @@ h6 { font-size: 12px; color: #444460; }
 
 #j_main .j_Best .Best_l .Best_i1 { position: absolute; left: -7px; top: 140px; font-size: 30px; color: #999999; }
 
-#j_main .j_Best .Best_c { width: 1120px; height: 310px; color: #555555; }
+#j_main .j_Best .Best_c { width: 1120px; height: 310px; overflow: hidden; color: #555555; }
+
+#j_main .j_Best .Best_c .Best_ul { width: 2240px; }
 
 #j_main .j_Best .Best_c .Best_ul li { float: left; }
 

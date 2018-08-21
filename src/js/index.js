@@ -2,12 +2,12 @@
 * @Author: Marte
 * @Date:   2018-08-19 11:52:49
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-19 16:18:29
+* @Last Modified time: 2018-08-20 15:36:20
 */
 
 
 //引入header&footer
-(function(){
+;(function(){
 
     jQuery(function($){
 
@@ -21,7 +21,7 @@
 
 
 // 轮播图
-document.addEventListener('DOMContentLoaded',()=>{
+;document.addEventListener('DOMContentLoaded',()=>{
             
             
     let banner = document.getElementsByClassName('banner')[0];
@@ -128,4 +128,20 @@ document.addEventListener('DOMContentLoaded',()=>{
             
         }
     }
+
+
+
+
+
+
+    // 点击切换商品
+    // var Best_l = document.querySelector('.Best_l');
+    // var Best_r = document.querySelector('.Best_r');
+    // var Best_ul = document.querySelector('.Best_ul');
+
+    // Best_l.onclick = function(){
+    //         Best_ul.style.left = -1120 + 'px';
+    // }
+
+
 });

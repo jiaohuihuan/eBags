@@ -139,11 +139,12 @@ h3{font-size:map-get($headings,h3)}
         .Best_c{
             width: 1120px;
             height: 310px;
-            // background: pink;
+            overflow:hidden;
             color:nth($color,2);
             .Best_ul{
+                width: 2240px;
                 li{
-                    float: left;
+                   float:left;
                     img{
                         display:block;
                         width:120px;
