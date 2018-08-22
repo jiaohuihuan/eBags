@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取微博信息</title>
+	<style>
+		.datalist{margin:0 auto;line-height:2;}
+		.datalist li{position:relative;border-bottom:1px dotted #ddd;padding-right:100px;}
+		.datalist li span{position:absolute;right:0;top:0;margin:0 5px;padding:2px 5px 2px 20px;background:skyblue url(icon/com.svg) no-repeat 5px center;background-size:20px;border-radius: 5px;width:30px;text-align:center;color:#fff;}
+		.datalist li span.like{right:70px;background-image:url(icon/zan.svg);background-color:orange;}
+
+	</style>
+	<script>
+		/*
+			读取weibo.json文件内容
+
+			状态码：
+				* 200
+				* 304
+				* 404
+				* 500
+		 */
+		document.addEventListener('DOMContentLoaded',()=>{
+			var datalist = document.querySelector('.datalist');
+
+			let status = [200,304]
+
+			let xhr = new XMLHttpRequest();
+			// 处理数据
+			xhr.onload = function(){
+				if(status.indexOf(xhr.status) >=0){
+					let data = JSON.parse(xhr.responseText);
+
+					console.log(data)
+
+					// 生成html结构ul>li
+					let ul = document.createElement('ul');
+					ul.innerHTML = data.map(item=>{
+						return `<li data-id="${item.id}">
+							<h4>${item.username}</h4>
+							<div class="content">${item.content}</div>
+							<span class="like">${item.likecnt}</span>
+							<span class="comment">${item.comtcnt}</span>
+						</li>`
+					}).join('');
+
+					// 写入页面
+					datalist.appendChild(ul);
+				}
+			}
+
+			xhr.open('get','../api/data/weibo.json',true);
+			xhr.send();
+
+
+			// 点赞
+			// * 数量加1+
+			// * 修改json文件中对应的数字
+
+
+			let xhr_zan = new XMLHttpRequest();
+
+		
+			datalist.onclick = e=>{
+				if(e.target.className === 'like'){
+					// 获取当前id
+					let id = e.target.parentNode.dataset.id;
+					xhr_zan.onload = ()=>{
+						if(status.indexOf(xhr.status) >= 0){
+							let data = JSON.parse(xhr_zan.responseText);
+							
+							// 重新写入点赞数量
+							e.target.innerHTML = data.likecnt;
+						}
+					}
+					xhr_zan.open('get','../api/weibo.php?id='+id,true);
+					xhr_zan.send();
+				}
+			}
+
+		});
+		
+	</script>
+</head>
+<body>
+	<h1>微博信息</h1>
+	<div class="datalist">
+		
+	</div>
+</body>
+</html>

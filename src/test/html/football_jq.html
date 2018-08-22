@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>足球解说</title>
+	<style>
+		body{padding:50px;}
+		ul{list-style: none;padding:0;margin:0;}/*reset*/
+		.datalist{border:1px solid #ddd;padding:15px;}
+		.datalist li{padding:15px 5px;border-bottom:1px dotted #ccc;}
+		.datalist li h4{margin:0;}
+		.page span{display:inline-block;margin:5px;width:40px;line-height:1.8;text-align: center;background-color:#dfdfdf;color:#666;}
+		.page span.active{background-color:#fc0;color:#fff;}
+	</style>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		/*
+			ajax直接请求json文件内容
+				* 一次性请求所有数据
+				* 缺点：
+					* 不能分页
+		 */
+		// document.addEventListener('DOMContentLoaded',()=>{
+		// 	let datalist = document.querySelector('.datalist');
+		// 	let qty = document.querySelector('#qty');
+
+		// 	// 声明两个变量，用于存放分页页码和每页显示数量
+		// 	var _pageNo=1;
+		// 	var _qty=5;
+
+		// 	/*let xhr = new XMLHttpRequest();
+		// 	// onload加载完成
+		// 	xhr.onload = function(){
+		// 		let data = JSON.parse(xhr.responseText);
+		// 		let ul = document.createElement('ul');
+		// 		ul.innerHTML = data.map(item=>{
+		// 			return `
+		// 				<li>
+		// 					<strong>${item.name}</strong>
+		// 					<div class="content">${item.content}</div>
+		// 				</li>
+		// 			`
+		// 		}).join('');
+
+		// 		// 把ul写入页面
+		// 		datalist.appendChild(ul);
+		// 	}
+		// 	xhr.open('get','../api/data/football.json');
+		// 	xhr.send();*/
+
+
+		// 	let xhr = new XMLHttpRequest();
+		// 	xhr.onload = function(){
+		// 		let res = JSON.parse(xhr.responseText);
+				
+
+		// 		// 先清空之前的内容
+		// 		datalist.innerHTML = '';
+
+
+		// 		let ul = document.createElement('ul');
+		// 		ul.innerHTML = res.data.map(item=>{
+		// 			return `
+		// 				<li>
+		// 					<strong>${item.name}</strong>
+		// 					<div class="content">${item.content}</div>
+		// 				</li>
+		// 			`
+		// 		}).join('');
+
+		// 		// 把ul写入页面
+		// 		datalist.appendChild(ul);
+
+		// 		// 创建分页
+		// 		// 计算分页数量
+		// 		let pageLen = Math.ceil(res.total/res.qty);
+
+		// 		let page = document.createElement('div');
+		// 		page.className = 'page';
+		// 		for(var i=0;i<pageLen;i++){
+		// 			var span = document.createElement('span');
+		// 			span.innerText = i+1;
+
+		// 			// 高亮当前分页
+		// 			if(i===res.pageNo-1){
+		// 				span.className = 'active';
+		// 			}
+		// 			page.appendChild(span);
+		// 		}
+
+		// 		datalist.appendChild(page);
+
+
+		// 	}
+		// 	xhr.open('get','../api/football.php?qty='+_qty+'&pageNo='+_pageNo);
+		// 	xhr.send();
+
+
+		// 	// 利用事件委托实现分页切换
+		// 	datalist.onclick = function(e){
+		// 		if(e.target.parentNode.className === 'page'){
+		// 			// 得到点击的分页
+		// 			_pageNo = e.target.innerText;
+					
+
+		// 			xhr.open('get','../api/football.php?qty='+_qty+'&pageNo='+_pageNo);
+		// 			xhr.send();
+		// 		}
+		// 	}
+
+
+		// 	// 修改每页显示数量
+		// 	qty.onchange = function(){
+		// 		_qty = qty.value;
+		// 		xhr.open('get','../api/football.php?qty='+_qty+'&pageNo='+_pageNo);
+		// 		xhr.send();
+		// 	}
+		// })
+
+		jQuery(function($){
+			var _pageNo=1;
+			var _qty=5;
+			$.ajax({
+				// type:'post',
+				// url:'../api/data/football.json',
+				url:'../api/football.php',
+				data:{
+					qty:_qty,
+					pageNo:_pageNo
+				},
+				dataType:'jsonp',
+				// jsonp:'cb',
+				// jsonpCallback:'getData',
+				success:function(res){
+					console.log(res);
+				}
+			})
+		});
+
+	</script>
+</head>
+<body>
+	<h1>足球解说</h1>
+	<select id="qty">
+		<option value="3">3</option>
+		<option value="5" selected>5</option>
+		<option value="10">10</option>
+		<option value="15">15</option>
+	</select>
+	<div class="datalist">
+		
+	</div>
+
+</body>
+</html>

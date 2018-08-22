@@ -14,6 +14,58 @@ h5 { font-size: 18px; color: #444460; }
 
 h6 { font-size: 12px; color: #444460; }
 
+.j_header .j_china { height: 30px; width: 100%; background: #EEEEEE; }
+
+.j_header .j_china .img1 { padding: 5px 0px 5px 1200px; }
+
+.j_header .j_search { height: 83px; position: relative; }
+
+.j_header .j_search .img2 { width: 147px; height: 58px; margin: 25px 0 0 106px; }
+
+.j_header .j_search .input { width: 304px; height: 44px; border: 1px solid #ccc; margin: 5px 0 9px 32px; border-radius: 5px; font-size: 16px; line-height: 44px; padding-left: 15px; font-style: italic; }
+
+.j_header .j_search .i1 { position: absolute; left: 557px; top: 31px; color: #ccc; font-size: 25px; }
+
+.j_header .j_search .order1 { position: absolute; left: 1042px; top: 48px; font-size: 12px; color: #006DD9; }
+
+.j_header .j_search .order2 { position: absolute; left: 1108px; top: 48px; font-size: 12px; color: #006DD9; }
+
+.j_header .j_search .i2 { position: absolute; left: 1155px; top: 46px; color: #002253; }
+
+.j_header .j_search .car { display: block; width: 66px; height: 46px; border: 1px solid #2F1C60; position: absolute; right: 35px; top: 23px; color: #002253; border-radius: 5px; }
+
+.j_header .j_search .car .car_0 { position: absolute; top: 13px; left: 30px; font-size: 10px; }
+
+.j_header .j_search .car .i3 { font-size: 38px; color: #002253; position: absolute; right: 14px; top: 2px; font-weight: bold; }
+
+.j_header .j_nav { height: 60px; border-bottom: 1px solid #F2F0F1; }
+
+.j_header .j_nav .ul { width: 1140px; margin-left: 73px; position: relative; }
+
+.j_header .j_nav .ul .li_nav { display: block; float: left; padding: 15px 30px; margin-top: 10px; color: #000; font-size: 14px; border: 1px solid #fff; font-weight: bold; }
+
+.j_header .j_nav .ul .li_nav .box { display: none; width: 1138px; height: 581px; background: #fff; position: absolute; top: 60px; left: 0px; border: 1px solid #F2F0F1; z-index: 1000; border-top: none; box-shadow: 0px 3px  10px 2px #eee; }
+
+.j_header .j_nav .ul .li_nav .box .ul1, .j_header .j_nav .ul .li_nav .box .ul2, .j_header .j_nav .ul .li_nav .box .ul3 { color: #2B0000; font-weight: normal; padding-top: 31px; }
+
+.j_header .j_nav .ul .li_nav .box .ul1 li, .j_header .j_nav .ul .li_nav .box .ul2 li, .j_header .j_nav .ul .li_nav .box .ul3 li { border: none; }
+
+.j_header .j_nav .ul .li_nav .box .ul1 li a, .j_header .j_nav .ul .li_nav .box .ul2 li a, .j_header .j_nav .ul .li_nav .box .ul3 li a { font-size: 14px; line-height: 24px; }
+
+.j_header .j_nav .ul .li_nav .box .ul1 li .red, .j_header .j_nav .ul .li_nav .box .ul2 li .red, .j_header .j_nav .ul .li_nav .box .ul3 li .red { color: #D90000; }
+
+.j_header .j_nav .ul .li_nav .box .ul1 { padding-left: 25px; }
+
+.j_header .j_nav .ul .li_nav .box .ul2 { padding-left: 150px; }
+
+.j_header .j_nav .ul .li_nav .box .ul3 { padding-left: 102px; }
+
+.j_header .j_nav .ul .li_nav:hover { color: #0059B2; background: #F8F8F8; border: 1px solid #F2F0F1; border-bottom: 2px solid #fff; }
+
+.j_header .j_nav .ul .li_nav:hover .box { display: block; }
+
+.j_header .j_nav .ul .sale { color: #D90000; }
+
 #j_main .banner { width: 100%; height: 350px; background: #F0F0E1; margin-top: 13px; }
 
 #j_main .banner img { display: block; }

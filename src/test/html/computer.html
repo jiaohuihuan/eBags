@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组装电脑</title>
+	<script>
+		/*
+			组装电脑
+
+				* 以同步的写法执行异步的代码
+		 */
+		
+		document.addEventListener('DOMContentLoaded',()=>{
+			let status = [200,304];
+
+			/* 回调地狱
+			// CPU
+			let xhr_cpu = new XMLHttpRequest();
+			xhr_cpu.onload = function(){
+				if(status.indexOf(xhr_cpu.status)>=0){
+					let cpu = xhr_cpu.responseText;
+
+					// 硬盘
+					let xhr_hd = new XMLHttpRequest();
+					xhr_hd.onload = function(){
+						if(status.indexOf(xhr_hd.status)>=0){
+							let hd = xhr_hd.responseText;
+							// 内存
+							let xhr_RAM = new XMLHttpRequest();
+							xhr_RAM.onload = function(){
+								if(status.indexOf(xhr_RAM.status)>=0){
+									let RAM = xhr_RAM.responseText;
+									// 主板
+									let xhr_mb = new XMLHttpRequest();
+									xhr_mb.onload = function(){
+										if(status.indexOf(xhr_mb.status)>=0){
+											let mb = xhr_mb.responseText;
+											// 显示器
+											let xhr_monitor = new XMLHttpRequest();
+											xhr_monitor.onload = function(){
+												if(status.indexOf(xhr_monitor.status)>=0){
+													let monitor = xhr_monitor.responseText;
+													// 组装电脑
+													console.log('组装电脑：',cpu,hd,RAM,mb,monitor);
+												}
+											}
+											xhr_monitor.open('get','../api/computer_monitor.php',true);
+											xhr_monitor.send();
+
+
+										}
+									}
+									xhr_mb.open('get','../api/computer_mb.php',true);
+									xhr_mb.send();
+								}
+							}
+							xhr_RAM.open('get','../api/computer_RAM.php',true);
+							xhr_RAM.send();
+						}
+					}
+					xhr_hd.open('get','../api/computer_hd.php',true);
+					xhr_hd.send();
+				}
+			}
+			xhr_cpu.open('get','../api/computer_cpu.php',true);
+			xhr_cpu.send();*/
+
+
+			// CPU
+			let pro_cpu = new Promise((resolve,reject)=>{
+				let xhr_cpu = new XMLHttpRequest();
+				xhr_cpu.onload = function(){
+					if(status.indexOf(xhr_cpu.status)>=0){
+						let cpu = xhr_cpu.responseText;
+
+						// 成功，传递cpu
+						resolve(cpu);
+					}
+				}
+				xhr_cpu.open('get','../api/computer_cpu.php',true);
+				xhr_cpu.send();
+
+			});
+			
+			
+			// 显示器
+			let pro_monitor = new Promise((resolve,reject)=>{
+				let xhr_monitor = new XMLHttpRequest();
+				xhr_monitor.onload = function(){
+					if(status.indexOf(xhr_monitor.status)>=0){
+						let monitor = xhr_monitor.responseText;
+						// 成功，传递monitor
+						resolve(monitor);
+					}
+				}
+				xhr_monitor.open('get','../api/computer_monitor.php',true);
+				xhr_monitor.send();
+			});
+			
+			// 主板
+			let pro_mb = new Promise((resolve,reject)=>{
+				let xhr_mb = new XMLHttpRequest();
+				xhr_mb.onload = function(){
+					if(status.indexOf(xhr_mb.status)>=0){
+						let mb = xhr_mb.responseText;
+						// 成功，传递mb
+						resolve(mb);
+					}
+				}
+				xhr_mb.open('get','../api/computer_mb.php',true);
+				xhr_mb.send();
+			});
+
+			// 内存
+			let pro_RAM = new Promise((resolve,reject)=>{
+				let xhr_RAM = new XMLHttpRequest();
+				xhr_RAM.onload = function(){
+					if(status.indexOf(xhr_RAM.status)>=0){
+						let RAM = xhr_RAM.responseText;
+						// 成功，传递RAM
+						resolve(RAM);
+					}
+				}
+				xhr_RAM.open('get','../api/computer_RAM.php',true);
+				xhr_RAM.send();
+			});
+
+			// 硬盘
+			let pro_hd = new Promise((resolve,reject)=>{
+				let xhr_hd = new XMLHttpRequest();
+				xhr_hd.onload = function(){
+					if(status.indexOf(xhr_hd.status)>=0){
+						let hd = xhr_hd.responseText;
+						// 成功，传递hd
+						resolve(hd);
+					}
+				}
+				xhr_hd.open('get','../api/computer_hd.php',true);
+				xhr_hd.send();
+			});
+
+
+
+			// 组装电脑
+			// 必须等待以上请求全部完成
+
+			Promise.all([pro_cpu,pro_monitor,pro_mb,pro_RAM,pro_hd]).then(data=>{
+				// 这里的代码在状态改成Resolved时执行
+				// 以上5个promise对象的状态全部改成Resolved时，新promise的状态才是Resolved
+				console.log('组装电脑：',data);
+			});
+
+			// 竞速
+			Promise.race([pro_cpu,pro_monitor,pro_mb,pro_RAM,pro_hd]).then(data=>{
+				console.log('race:',data);
+			})
+		})
+	</script>
+</head>
+<body>
+	<h1>组装电脑</h1>
+</body>
+</html>

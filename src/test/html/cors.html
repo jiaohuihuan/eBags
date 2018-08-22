@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跨域请求解决方案-CORS</title>
+	<script>
+		/*
+			跨域请求解决方案-CORS
+		 */
+		
+		let xhr = new XMLHttpRequest();
+		xhr.onload = function(){
+			console.log(xhr.responseText);
+		}
+		xhr.open('get','http://localhost:1001/cors.php',true);
+		xhr.send();
+	</script>
+</head>
+<body>
+	<h1>跨域请求解决方案-CORS</h1>
+</body>
+</html>

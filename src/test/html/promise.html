@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Promise</title>
+	<script>
+		/*
+			Promise
+
+				* 状态
+					* Pending（未完成）可以理解为Promise对象实例创建时候的初始状态
+					* Resolved（成功） 可以理解为成功的状态
+					* Rejected（失败） 可以理解为失败的状态
+
+				* 方法
+					* then(fn,fn)
+					* catch(fn)		等效于then的第二个参数
+
+
+				理解清楚：
+						* 如何实例化Promise对象
+						* Promise的特性：状态不可再次改变
+						* 如何改变Promise的状态
+						* 状态改变后执行过程
+		 */
+		
+		// 初始化：Pending
+		let myPro = new Promise(function(resolve,reject){
+			// resolve,rejectes为两个函数
+			// * resolve():执行resolve，把状态从Pending -> Resolved
+			// * rejecte()：执行rejecte，把状态从Pending -> Rejected
+
+			// console.log(resolve,reject);
+
+			resolve(['laoxie','lemon']);//Resolved
+	
+			// reject();//Rejected
+		});
+
+		myPro.then(function(a){
+			// 当状态变成Resolved，执行这时的代码
+			console.log(666,a)
+		},function(){
+			// 当状态变成Rejected，执行这里的码
+			console.log(777)
+		})
+
+		console.log(myPro);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

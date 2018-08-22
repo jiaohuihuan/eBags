@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度搜索</title>
+	
+	<script>
+		/*
+			XMLHttpRequest
+				* 默认不支持跨域(同源策略：由于安全性的原因，不允许跨域访问)
+
+			跨域：协议，域名，端口三者不一致
+
+			跨域解决方案-JSONP
+				* 原理：script可引入其他域名的js，并执行
+				* jsonp不是ajax请求
+				* 返回js代码
+					* 一个函数的执行
+
+
+				JSONP请求步骤：
+					1、定义一个全局函数
+					2、生成script标签
+						* 设置src属性为接口地址，并传递函数名
+						* 写入html页面，自动发起请求
+					3、处理数据
+					4、删除script标签
+
+
+				* 搞懂JSONP：
+					* 函数在哪定义：我的服务器
+					* 函数在哪执行：其他服务器
+
+
+				* 问题：请求数量过多（如何解决）
+					* setTimeout()
+					* clearTimeout()
+			
+			api:
+				* https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?json=1&cb=getData&wd=html5
+
+		 */
+		
+		
+		document.addEventListener('DOMContentLoaded',()=>{
+			let keyword = document.querySelector('#keyword');
+			let list = document.querySelector('#list');
+
+			let timer,script
+
+			// 定义全局函数
+			// 处理数据
+			window.getData = function(data){
+				console.log(data);
+
+				list.innerHTML = data.s.map(item=>{
+					return `<li>${item}</li>`;
+				});
+
+				// 删除script便签
+				document.body.removeChild(script);
+			}
+				
+
+			
+			keyword.oninput = ()=>{
+				var _keyword = keyword.value;//html： h->ht->htm->html
+
+				clearTimeout(timer);
+				timer = setTimeout(function(){
+					// 生成script标签
+					script = document.createElement('script');
+					script.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?json=1&cb=getData&wd='+_keyword;
+
+					// 写入页面：开始请求
+					document.body.appendChild(script);
+
+				},800);
+			}
+
+		});
+
+
+
+		// function sum(data){
+		// 	// 在这获取其他服务器的数据
+		// 	console.log(data)
+		// }
+	</script>
+	<!-- <script src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?json=1&cb=getData&wd=laoxie"></script> -->
+	<!-- <script src="http://localhost:1001/test.js"></script> -->
+	<!-- <script src="http://localhost:1001/jsonp.php?callback=getData"></script> -->
+</head>
+<body>
+	<h1>百度搜索</h1>
+	<input type="search" id="keyword">
+	<button>百度一下</button>
+	<ul id="list"></ul>
+	<!-- <iframe src="http://qq.com" frameborder="0"></iframe> -->
+</body>
+</html>

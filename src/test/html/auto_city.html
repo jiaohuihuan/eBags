@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自动定位城市</title>
+	<script>
+		/*
+			自动定位城市
+				* http://ip.taobao.com/service/getIpInfo.php?ip=61.144.96.228
+
+			城市 <- IP(外网) <- PHP爬数据（爬虫原理）
+
+			编写php接口
+		 */
+		let status = [200,304];
+
+		let xhr = new XMLHttpRequest();
+		xhr.onload = ()=>{
+			if(status.indexOf(xhr.status) != -1){
+				let ip = xhr.responseText;
+				console.log(ip);
+
+				// 根据ip地址获取城市
+				xhr_city = new XMLHttpRequest();
+				xhr_city.onload = ()=>{
+					if(status.indexOf(xhr_city.status) != -1){
+						let res = JSON.parse(xhr_city.responseText);
+						console.log(res)
+
+						// 显示到页面
+						document.getElementById('city').innerHTML = res.data.city;
+					}
+				}
+				xhr_city.open('get','../api/get_city.php?ip='+ip,true);
+				xhr_city.send();
+			}
+		}
+		xhr.open('get','../api/outer_ip.php',true);
+		xhr.send();
+
+
+
+	</script>
+</head>
+<body>
+	<h1>自动定位城市</h1>
+	<div id="city"></div>
+</body>
+</html>

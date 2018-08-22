@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片加载</title>
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			// let img = document.images[0];
+
+			// let myPro = new Promise((resolve,reject)=>{
+			// 		img.onload = function(){
+			// 			resolve(img);
+			// 		}
+			// });
+
+
+			// 在这里获取图片的宽高
+			// myPro.then(img=>{
+			// 	console.log(img.offsetWidth);
+			// });
+
+
+			// 封装函数
+			function loadImg(path){
+				var myPro = new Promise(function(resolve,reject){
+					// var img = document.createElement('img')
+					var img = new Image();
+					img.src = path;
+
+					// 成功加载
+					img.onload = function(){
+						resolve(img);
+					}
+
+					// 失败
+					img.onerror = reject;
+				});
+
+				return myPro
+			}
+
+
+			// 用户使用
+			loadImg('img/a1.jpg').then(img=>{
+				// 要获取图片的宽高，必须显示到页面
+				document.body.appendChild(img);
+
+				console.log(img);
+				console.log(img.offsetWidth,img.offsetHeight);
+			}).catch(function(){
+				console.log('失败')
+			});
+
+
+		})
+	</script>
+</head>
+<body>
+	<h1>图片加载</h1>
+</body>
+</html>

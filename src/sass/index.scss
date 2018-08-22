@@ -22,6 +22,165 @@ h3{font-size:map-get($headings,h3)}
 
 
 
+.j_header{
+    .j_china{
+        height:30px;
+        width: 100%;
+        background:#EEEEEE;
+        .img1{
+            padding:5px 0px 5px 1200px;
+        }
+    }
+    .j_search{
+        height: 83px;
+        // background: pink;
+        position:relative;
+        .img2{
+            width: 147px;
+            height: 58px;
+            margin: 25px 0 0 106px;
+        }
+        .input{
+            width: 304px;
+            height: 44px;
+            border:1px solid #ccc;
+            margin: 5px 0 9px 32px;
+            border-radius:5px;
+            font-size: 16px;
+            line-height: 44px;
+            padding-left:15px;
+            font-style: italic;          
+        }
+        .i1{
+            position:absolute;
+            left: 557px;
+            top: 31px;
+            color:#ccc;
+            font-size: 25px;
+        }
+        .order1{
+            position:absolute;
+            left: 1042px;
+            top: 48px;
+            font-size: 12px;
+            color:#006DD9;
+        }
+        .order2{
+            position:absolute;
+            left: 1108px;
+            top: 48px;
+            font-size: 12px;
+            color:#006DD9;
+        }
+        .i2{
+            position:absolute;
+            left: 1155px;
+            top: 46px;
+            color:#002253;
+        }
+        .car{
+            display:block;
+            width: 66px;
+            height: 46px;
+            border:1px solid #2F1C60;
+            position:absolute;
+            right: 35px;
+            top: 23px;
+            color:#002253;
+            border-radius:5px;
+            .car_0{
+                position:absolute;
+                top: 13px;
+                left:30px;
+                font-size: 10px;    
+            }
+            .i3{
+                font-size: 38px;
+                color:#002253;
+                position:absolute;
+                right: 14px;
+                top: 2px;
+                font-weight: bold;
+                
+            }
+        }
+    }
+    .j_nav{
+        height: 60px;
+        border-bottom:1px solid #F2F0F1;
+        // background: skyblue;
+        .ul{
+            width: 1140px;
+            // background: pink;
+            margin-left:73px;
+            position:relative;
+            .li_nav{
+                display:block;
+                float:left;
+                padding:15px 30px;
+                margin-top:10px;
+                color:#000;
+                font-size: 14px;
+                border:1px solid #fff;
+                font-weight: bold;
+                .box{
+                    display:none;
+                    width: 1138px;
+                    height: 581px;
+                    background: #fff;
+                    position:absolute;
+                    top: 60px;
+                    left:0px;
+                    border:1px solid #F2F0F1;
+                    z-index:1000;
+                    border-top:none;
+                    box-shadow:0px 3px  10px 2px #eee;
+                    .ul1,.ul2,.ul3{
+                        color:#2B0000;
+                        font-weight: normal;
+                        padding-top:31px;
+                        li{
+                            border:none;
+                            a{
+                                font-size: 14px;
+                                line-height: 24px;  
+                            }
+                            .red{
+                                color:#D90000;
+                            }
+                        }
+                    }
+                    .ul1{
+                        padding-left: 25px;
+                    }
+                    .ul2{
+                        padding-left: 150px;
+                    }
+                    .ul3{
+                        padding-left: 102px;
+                    }
+                }
+            }
+            .li_nav:hover{
+                color:#0059B2;
+                background: #F8F8F8 ;
+                border:1px solid #F2F0F1;
+                border-bottom:2px solid #fff;
+            }
+            .li_nav:hover .box{
+                display:block;
+            }
+            .sale{
+                color:#D90000;
+            }
+
+        }
+    }
+}
+
+
+
+
 #j_main{
     .banner{
         width: 100%;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同步与异步</title>
+	<script>
+		/*
+			同步与异步
+
+				* 异步：xhr不阻塞后面代码的执行
+				* 同步：xhr阻塞后面代码的执行（不推荐）
+		 */
+		
+		console.log('start');
+
+		/*// 异步请求（假设花费时间：5s）
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState === 4){
+				console.log('data');
+				console.log(xhr.responseText);
+			}
+		}
+		// 异步
+		xhr.open('get','../goodslist.php',false);
+		xhr.send();
+
+
+		console.log('end');*/
+
+		// for循环：同步
+		// console.log('for start');
+		// console.time('getTime');
+		// for(var i=0;i<10000000;i++){
+
+		// }
+		// console.timeEnd('getTime');
+		// console.log('for end');
+
+		// 延迟器/定时器：异步
+		setTimeout(function(){
+			console.log('timeout end');
+		},5000);
+
+		console.log('end');
+	</script>
+</head>
+<body>
+	<h1>同步与异步</h1>
+</body>
+</html>
