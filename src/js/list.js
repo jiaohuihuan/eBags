@@ -25,31 +25,55 @@ document.addEventListener('DOMContentLoaded',()=>{
             // 确认数据接收完毕
             // 在次获取数据：responseText
             var data = JSON.parse(xhr.responseText);
-            console.log(data);
 
 
 
             // 获取元素
             var goodslist = document.querySelector('.goodslist');
+          
 
-            goodslist.innerHTML = data.map(function(list,idx){ console.log(list,idx);
-                return `<li data-guid="${list.id}">
-                    <img class="img1" src="../img/list/${list.imgurl}"/>
-                    <p class="rate">${list.rate}</p>
-                    <img class="img2" src="../img/list/${list.xxurl}"/>
-                    <h4 class="h4">${list.name}</h4>
-                    <p class="content">${list.content}</p>
-                    <p class="date">Date：${list.date.slice(0,10)}</p>
-                    <p class="price">Price：CNY ${list.price}</p> 
-                </li>`
-            }).join('\n');
+                jiegou(data);
+              
 
 
+                //点击价格排序（重置页面）
+                var init = 1;
+                price.onclick = function(){
+                    var res = pricerank(data);
+                    if(init==1){
+                        jiegou(res);
+                        init = 2;
+                    }else if(init==2){
+                        res.reverse();
+                        jiegou(res);
+                        init = 1;
+                    }
+                    
+                }
 
 
-            // 获取a标签
-            var links = goodslist.getElementsByTagName('img');   console.log(links)
 
+                //点击日期排序（重置页面）
+                var init = 1;
+                 date.onclick = function(){
+                    var res = daterank(data);
+                    if(init==1){
+                        jiegou(res);
+                        init=2;                             
+                    }else if(init==2){
+                        res.reverse();
+                        jiegou(res);
+                        init = 1;
+                    }
+                }
+
+       
+
+
+
+
+            // 获取img标签
+            var links = goodslist.getElementsByTagName('img'); 
             for(var i=0;i<links.length;i++){
                 links[i].idx = i;
                 links[i].onclick = function(){
@@ -65,17 +89,12 @@ document.addEventListener('DOMContentLoaded',()=>{
                     // 去除多余的&
                     params = params.slice(0,-1);
 
-                    // 修改href属性
-                    // this.href = '06goods.html?'+params
 
                     // 在js中跳到06goods.html
-                    location.href = '../index.html?' + params;s
+                    location.href = 'goods.html?' + params;
 
-                    console.log(params);
                 }
             }
-
-
 
 
         }
@@ -86,96 +105,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     // 发起请求
     xhr.send();//readyState=2
-    // console.log(xhr);
-    
-
-
-
-
-
-
-
-
-
-
-
-
- 
-    // ————————————————————————日期排序——————————————————————————————
-
-    //获取页面元素
-    var date = document.querySelector('.date');
-    var price = document.querySelector('.price');
 
     
-
-    //获取页面元素
-    var goodslist = document.getElementById('goodslist');
-    var a = 'aaa';
-    
-
-    //根据数据生成ul，li
-    function init(){
-        var html = '<ul>';
-        for(var i=0;i<data.length;i++){
-            // 拼接li
-            html += `<li data-guid="${data[i].id}">
-            <a href="html/a.html"><img src="${data[i].imgurl}"/></a>
-            <h4>${data[i].name}</h4>
-            <p class="price"><del>${data[i].price}</del></p>
-            <p class="price1"><span>${data[i].sale}</span></p>
-            <p class="price2"><span>${data[i]._price}</span></p>
-            <p class="date"><span>${data[i].date}</span></p>
-            <p class="who">${data[i].who}</p>
-            </li>`;
-    
-        }
-        //闭合ul
-        html += '</ul>';
-        // 把ul写入页面
-        goodslist.innerHTML = html;
-    }
-
-    // 页面初始化，函数执行
-    init();
-    
-
-    //鼠标hover在Date上.....点击实现排序
-    function rank(){
-        var length = data.length;
-        for(var i = length - 1; i > 0; i--){
-            for(var j = 0; j < i; j++){
-                var front = (new Date(data[j].date)).getTime()
-                var later = (new Date(data[j+1].date)).getTime();
-                if (front > later) { 
-                    var temp = data[j];
-                    data[j] = data[j+1];
-                    data[j+1] = temp;
-                }
-            }
-        }
-    }
-    
-
-    full.onclick = function(){
-        rank();
-        // 调用函数，重置由新到旧的价格
-        init();
-    }
-
-    up.onclick = function(){
-        rank();
-        data = data.reverse();
-        init();
-    }
-
-
-
-
-
-
-
-
 
 
 
@@ -184,88 +115,79 @@ document.addEventListener('DOMContentLoaded',()=>{
     // ————————————————————————价格排序——————————————————————————————
    
     //获取页面元素
-    var price = document.getElementById('price');
-    var hide_p = document.getElementById('hide_p');
-    var priceFull = document.getElementById('priceFull');
-    var priceUp = document.getElementById('priceUp'); 
+    var price = document.querySelector('.price');
+    var date = document.querySelector('.date');   
+    var goodslist = document.querySelector('.goodslist');
+    // console.log(price,date,goodslist);
 
-    price.onmousemove = function(){
-        hide_p.style.display = "block";
+
+    // 根据数据生成li
+    function jiegou(a){  
+                goodslist.innerHTML = a.map(function(list,idx){    //console.log(list,idx);
+                    return `<li data-guid="${list.id}">
+                        <img class="img1" src="../img/list/${list.imgurl}"/>
+                        <p class="rate">${list.rate}</p>
+                        <img class="img2" src="../img/list/${list.xxurl}"/>
+                        <h4 class="h4">${list.name}</h4>
+                        <p class="content">${list.content}</p>
+                        <p class="date">Date：${list.date.slice(0,10)}</p>
+                        <p class="price">Price：CNY ${list.price}</p> 
+                    </li>`
+                }).join('\n');
     }
 
-    price.onmouseout = function(){
-        hide_p.style.display = "none";
-    }
-
-
-
-    //获取页面元素
-    var goodslist = document.getElementById('goodslist');
-
-    //根据数据生成ul，li
-    function priceinit(){
-        var html = '<ul>';
-        for(var i=0;i<data.length;i++){
-            // 拼接li
-              html += `<li data-guid="${data[i].id}">
-                <a href="html/a.html"><img src="${data[i].imgurl}"/></a>
-                <h4>${data[i].name}</h4>
-                <p class="price"><del>${data[i].price}</del></p>
-                <p class="price1"><span>${data[i].sale}</span></p>
-                <p class="price2"><span>${data[i]._price}</span></p>
-                <p class="date"><span>${data[i].date}</span></p>
-                <p class="who">${data[i].who}</p>
-            </li>`;
-        }
-        //闭合ul
-        html += '</ul>';
-        // 把ul写入页面
-        goodslist.innerHTML = html;
-    }
-
-    // 页面初始化，函数执行
-    priceinit();
+    
     
 
-    //鼠标hover在Date上.....点击实现排序
-    function pricerank(){
-        var length = data.length;
+    //点击price实现排序
+    function pricerank(arr){
+        var length = arr.length;   //console.log(goodslist);
         for(var i = length - 1; i > 0; i--){
             for(var j = 0; j < i; j++){
-                var front =  data[j].sale;
-                var later =  data[j+1].sale;
+                var front =  arr[j].price;
+                var later =  arr[j+1].price;
                 if (front > later) { 
-                    var temp = data[j];
-                    data[j] = data[j+1];
-                    data[j+1] = temp;
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
                 }
             }
         }
+        return arr;
     }
     
 
 
-    priceFull.onclick = function(){
-        pricerank();
-        data = data.reverse();
-        // 调用函数，重置由新到旧的价格
-        priceinit();
-    }
 
-    priceUp.onclick = function(){
-        pricerank();
 
-        // console.log(price);
 
-        priceinit();
+ 
+    // // ————————————————————————日期排序——————————————————————————————
+
+    //获取页面元素
+    var price = document.querySelector('.price');
+    var date = document.querySelector('.date');
+    var goodslist = document.querySelector('.goodslist');
+        
+
+ 
+    //点击date实现排序
+    function daterank(arr){
+        var length = arr.length;
+        for(var i = length - 1; i > 0; i--){
+            for(var j = 0; j < i; j++){
+                var front = (new Date(arr[j].date)).getTime()
+                var later = (new Date(arr[j+1].date)).getTime();
+                if (front > later) { 
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
     }
     
-    
-
-
-
-
-
 
 
 
