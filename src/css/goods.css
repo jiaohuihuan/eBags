@@ -4,15 +4,15 @@
 
 #main .container .goods .goods_t { width: 100%; height: 598px; position: relative; }
 
-#main .container .goods .goods_t .goods_t_l { width: 660px; height: 100%; padding-top: 50px; }
+#main .container .goods .goods_t .goods_t_l { width: 660px; height: 510px; padding-top: 50px; }
 
 #main .container .goods .goods_t .goods_t_l .big { width: 450px; height: 450px; background: #eee; margin: 0px 102px 12px 102px; }
 
 #main .container .goods .goods_t .goods_t_l .big img { width: 450px; height: 450px; }
 
-#main .container .goods .goods_t .goods_t_l .small { display: inline-block; width: 65px; height: 65px; background: #eee; margin-left: 25px; }
+#main .container .goods .goods_t .goods_t_l .small { display: inline-block; width: 65px; height: 65px; border: 1px solid #ddd; background: #eee; margin-left: 25px; }
 
-#main .container .goods .goods_t .goods_t_l .small img { width: 65px; height: 65px; }
+#main .container .goods .goods_t .goods_t_l .small img { width: 63px; height: 63px; }
 
 #main .container .goods .goods_t .goods_t_l .small:first-child { margin-left: 102px; }
 
@@ -46,7 +46,7 @@
 
 #main .container .goods .goods_t .goods_t_r .color .p2 span:first-child { font-size: 12px; color: #333333; padding-left: 37px; }
 
-#main .container .goods .goods_t .goods_t_r .color .p2 span:last-child { display: inline-block; width: 52px; height: 34px; border: 1px solid #ddd; border-radius: 5px; margin-left: 23px; font-size: 10px; color: #999; padding-left: 14px; line-height: 34px; }
+#main .container .goods .goods_t .goods_t_r .color .p2 .num { display: inline-block; width: 52px; height: 34px; border: 1px solid #ddd; border-radius: 5px; margin-left: 23px; font-size: 10px; color: #999; padding-left: 14px; line-height: 34px; }
 
 #main .container .goods .goods_t .goods_t_r .color .add { height: 40px; border-radius: 5px; background: #679300; color: #fff; line-height: 40px; padding-left: 188px; }
 

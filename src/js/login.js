@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             if(status.indexOf(xhr.status) >= 0){
     
                 if(xhr.responseText === 'yes'){
-                   console.log(666)
+                   console.log(xhr.responseText)
+                        
                     location.href = "../index.html";
 
                 }else if(xhr.responseText === 'no'){

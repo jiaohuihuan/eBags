@@ -1,0 +1,5 @@
+.lx-zoom{position:relative;width:300px;overflow:hidden;}
+.lx-zoom img{display:block;}
+.lx-zoom .zoom{display:none;position: absolute;width:30px;height:30px;border:1px solid #333;background-color:#888;opacity: 0.3;}
+.lx-bigzoom{display:none;position: absolute;width:400px;height:300px;overflow:hidden;border:1px solid #ddd;}
+.lx-bigzoom img{position: absolute;left:0;right:0;min-width:1000px;}

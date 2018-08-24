@@ -30,17 +30,17 @@
 
 #j_main .container .j_main_r .main_r_t .a3 { font-size: 10px; color: #798C8C; }
 
-#j_main .container .j_main_r .main_r_t .price { font-size: 16px; padding-bottom: 10px; padding-right: 26px; }
+#j_main .container .j_main_r .main_r_t .price_px { font-size: 16px; padding-bottom: 10px; padding-right: 26px; }
 
-#j_main .container .j_main_r .main_r_t .price .jt { width: 15px; }
+#j_main .container .j_main_r .main_r_t .price_px .jt { width: 15px; }
 
-#j_main .container .j_main_r .main_r_t .price:hover { color: #0059B2; }
+#j_main .container .j_main_r .main_r_t .price_px:hover { color: #0059B2; }
 
-#j_main .container .j_main_r .main_r_t .date { font-size: 16px; }
+#j_main .container .j_main_r .main_r_t .date_px { font-size: 16px; }
 
-#j_main .container .j_main_r .main_r_t .date .jt { width: 15px; }
+#j_main .container .j_main_r .main_r_t .date_px .jt { width: 15px; }
 
-#j_main .container .j_main_r .main_r_t .date:hover { color: #0059B2; }
+#j_main .container .j_main_r .main_r_t .date_px:hover { color: #0059B2; }
 
 #j_main .container .j_main_r .main_r_b .goodslist li { padding-top: 90px; float: left; width: 264px; }
 
