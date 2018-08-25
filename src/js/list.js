@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded',()=>{
                  var src=$(e.target).parent('li').children('.img1').attr('src').slice(12)
                    $.each(data,function(idx,item){
                            if(item.imgurl==src){
-                            console.log(666)
-                              var id=item.id;
-                                  location.href = 'goods.html?' + 'id=' + id;
+                                // console.log(666)
+                                var id=item.id;
+                                location.href = 'goods.html?' + 'id=' + id;
                            }
 
                      }) 
