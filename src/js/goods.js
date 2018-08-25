@@ -63,7 +63,7 @@
             var dataimg = data[0].imgurl;
             var dataname = data[0].name;
             var dataprice = data[0].price;
-            console.log(dataimg);
+            // console.log(dataimg);
 
 
             // 获取页面元素
@@ -96,54 +96,82 @@
 
 
 
+    //商品添加到购物车—————————————————————————————————————————
+    
+    var c_img = document.querySelector('.c_img');
+    var c_name = document.querySelector('.dataname');
+    var c_price = document.querySelector('.dataprice');
+    var c_qty = document.querySelector('.num');
+    var c_btn = document.querySelector('.add');
+    var c_goods = document.querySelector('.goods_t');
+    console.log(c_img,c_name,c_price,c_qty,c_btn,c_goods);
+         
 
 
-// __________________________________放大镜实验————————————————————————————————
+        // 声明一个变量，用于存放所有添加的商品信息
+        var goodslist = Cookie.get('goodslist');//'[{},{}..]' 或 ''
+
+        if(goodslist === ''){
+            goodslist = []
+        }else{
+            goodslist = JSON.parse(goodslist);//goodslist必须为json字符串
+        }
+
+
+        // 事件委托
+        // 利用事件委托实现添加到购物车的效果
+        c_goods.onclick = function(e){
+            // Event对象兼容
+            e = e || window.event;
+
+            // 事件源对象兼容
+            var target = e.target || e.srcElement;
+
+
+            // 判断是否点击了添加购物车按钮
+            if(target.className === 'c_btn'){
+                // 获取当前需要提取内容的容器
+                // var currentLi = target.parentNode.parentNode;//goods_t_r
+                var guid = c_goods.getAttribute('data-guid');
+
+                // 判断当前商品是否已经添加过
+                // * 已添加：找出这个商品，数量+1
+                // * 未添加：创建对象，商量为1，写入数组
+
+                var currentGoods = goodslist.filter(function(g){
+                    return g.guid === guid;
+                });//[{}]或[]
+
+                if(currentGoods.length>0){
+                    // 存在，数量+1
+                    currentGoods[0].c_qty++;
+                }else{
+                    // 不存在，添加商品
+
+                    // 获取商品信息
+                    // 把goods保持外观，存入cookie(只能字符串)：json字符串
+                    var goods = {
+                        guid:guid,
+                        c_bigsrc: c_img.src,
+                        c_name: c_name.innerText,
+                        c_price: dataprice.innerText,
+                        c_qty:1
+                    }
+
+                    // 当前商品添加到数组
+                    goodslist.push(c_goods);
+                }
+
+
+                Cookie.set('goodslist',JSON.stringify(goodslist));
+            }
+        }
 
 
 
-    // $(function(){           
-    //    $(".jqzoom").jqueryzoom({
-    //         xzoom:400,
-    //         yzoom:400,
-    //         offset:10,
-    //         position:"right",
-    //         preload:1,
-    //         lens:1
-    //     });
-    //     $("#spec-list").jdMarquee({
-    //         deriction:"left",
-    //         width:350,
-    //         height:56,
-    //         step:2,
-    //         speed:4,
-    //         delay:10,
-    //         control:true,
-    //         _front:"#spec-right",
-    //         _back:"#spec-left"
-    //     });
-    //     $("#spec-list img").bind("mouseover",function(){
-    //         var src=$(this).attr("src");
-    //         $("#spec-n1 img").eq(0).attr({
-    //             src:src.replace("\/n5\/","\/n1\/"),
-    //             jqimg:src.replace("\/n5\/","\/n0\/")
-    //         });
-    //         $(this).css({
-    //             "border":"2px solid #ff6600",
-    //             "padding":"1px"
-    //         });
-    //     }).bind("mouseout",function(){
-    //         $(this).css({
-    //             "border":"1px solid #ccc",
-    //             "padding":"2px"
-    //         });
-    //     });             
-    // })
 
 
 
-
-// __________________________________放大镜实验————————————————————————————————
 
 
 

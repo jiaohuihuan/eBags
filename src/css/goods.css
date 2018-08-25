@@ -176,11 +176,9 @@
 
 #main .container .rev .rev_r h1 { font-size: 22px; color: #333; padding: 34px 0px 25px 0px; }
 
-#main .container .rev .rev_r .l-img { padding-right: 15px; }
+#main .container .rev .rev_r .l-img { padding-right: 15px; width: 180px; margin-bottom: 18px; }
 
-#main .container .rev .rev_r .r-img { padding-left: 21px; }
-
-#main .container .rev .rev_r span { font-size: 20px; font-weight: bold; }
+#main .container .rev .rev_r .r-img { padding-left: 21px; width: 180px; }
 
 #main .container .rev .rev_r p { font-size: 10px; padding-top: 18px; color: #666; }
 

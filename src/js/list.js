@@ -5,6 +5,10 @@
 
         $('#j_header').load('../html/header&footer.html .j_header');
         $('#j_footer').load('../html/header&footer.html .j_footer');
+
+
+       
+    
     })
 
 })();
@@ -35,29 +39,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 jiegou(data);
 
 
-
-// ____________________点击商品跳转到该商品详情页__________________________________
-
-    var li = goodslist.children;
-    // console.log(li);
-         
-    for(let i=0;i<li.length;i++){
-        li[i].onclick = function(){
-            var id = li[i].attributes["data-guid"].nodeValue;
-
-
-            location.href = 'goods.html?' + 'id=' + id;
-
-        }
-    }
-
-
-
-
-// ____________________点击商品跳转到该商品详情页__________________________________
-
-
-              
+ 
 
 
                 //点击价格排序（重置页面）
@@ -92,6 +74,28 @@ document.addEventListener('DOMContentLoaded',()=>{
                 }
 
 
+// ____________________点击商品跳转到该商品详情页__________________________________
+// 由于点击排序后，id顺序页变了，要通过商品唯一的url属性获取对应的内容，事件委托给父级（类似表格复制后的行不能操作，需要事件委托给父级）
+
+             $('.goodslist').on('click',function(e){
+                if(e.target.tagName=='IMG'|| e.target.tagName=='P'||e.target.tagName==='H4' ){
+                 var src=$(e.target).parent('li').children('.img1').attr('src').slice(12)
+                   $.each(data,function(idx,item){
+                           if(item.imgurl==src){
+                            console.log(666)
+                              var id=item.id;
+                                  location.href = 'goods.html?' + 'id=' + id;
+                           }
+
+                     }) 
+                  
+                  }
+             })
+
+
+// ____________________点击商品跳转到该商品详情页__________________________________
+
+
         }
     }
 
@@ -119,7 +123,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     // 根据数据生成li
     function jiegou(a){  
                 goodslist.innerHTML = a.map(function(list,idx){  
-                    return `<li data-guid="${list.id}">
+                    return `<li data-guid="${list.id}" class="dj_li">
                         <img class="img1" src="../img/list/${list.imgurl}"/>
                         <p class="rate">${list.rate}</p>
                         <img class="img2" src="../img/list/${list.xxurl}"/>

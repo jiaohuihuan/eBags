@@ -6,7 +6,9 @@
 
 #main .container .shop .shop_l .shop_l_c { background: #F5F5F5; border: 1px solid #ddd; color: #333333; font-size: 18px; padding-left: 18px; line-height: 45px; width: 847px; }
 
-#main .container .shop .shop_l .shop_l_b .good { width: 847px; border-bottom: 1px solid #999999; border-right: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; }
+#main .container .shop .shop_l .shop_l_b .good { position: relative; width: 847px; border-bottom: 1px solid #999999; border-right: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; }
+
+#main .container .shop .shop_l .shop_l_b .good .btn-close { position: absolute; top: 26px; right: 18px; }
 
 #main .container .shop .shop_l .shop_l_b .good .good_l { width: 156px; text-align: center; padding-top: 40px; }
 
@@ -29,6 +31,8 @@
 #main .container .shop .shop_l .shop_l_b .good .good_r .r_p1 { font-size: 10px; color: #A19F9C; padding: 32px 0px 15px 0px; border-bottom: 1px solid #ccc; }
 
 #main .container .shop .shop_l .shop_l_b .good .good_r .r_p2 { font-size: 14px; color: #333333; padding-top: 29px; font-weight: bold; }
+
+#main .container .shop .shop_l .shop_l_b .btnClear { width: 150px; height: 30px; background: #ddd; border-radius: 5px; text-align: center; line-height: 30px; font-size: 14px; margin-top: 20px; }
 
 #main .container .shop .shop_r .check1 { background: #679300; height: 34px; border-radius: 5px; margin-top: 24px; color: #fff; line-height: 34px; text-align: center; font-size: 12px; }
 

@@ -29,6 +29,12 @@
                 }
                 .shop_l_b{
                     .good{
+                        position:relative;
+                        .btn-close{
+                            position:absolute;
+                            top: 26px;
+                            right: 18px;
+                        }
                         width: 847px;
                         // height: 205px;
                         border-bottom:1px solid #999999;
@@ -107,6 +113,16 @@
                                 font-weight: bold;
                             }
                         }
+                    }
+                    .btnClear{
+                        width: 150px;
+                        height: 30px;
+                        background: #ddd;
+                        border-radius:5px;
+                        text-align: center;
+                        line-height: 30px;
+                        font-size: 14px;
+                        margin-top: 20px;
                     }
                 }
             }
