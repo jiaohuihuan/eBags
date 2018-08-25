@@ -1,92 +1,113 @@
-@charset "UTF-8";
 #main .container { width: 1140px; }
 
-#main .container .shop .shop_l { width: 877px; }
+#main .container .shop { width: 877px; }
 
-#main .container .shop .shop_l .shop_l_t { color: #3871AA; padding-top: 40px; padding-left: 737px; font-size: 12px; padding-bottom: 10px; }
+#main .container .shop .shop_l_t { color: #3871AA; padding-top: 40px; padding-left: 737px; font-size: 12px; padding-bottom: 10px; }
 
-#main .container .shop .shop_l .shop_l_c { background: #F5F5F5; border: 1px solid #ddd; color: #333333; font-size: 18px; padding-left: 18px; line-height: 45px; width: 847px; }
+#main .container .shop .shop_l_c { background: #F5F5F5; border: 1px solid #ddd; color: #333333; font-size: 18px; padding-left: 18px; line-height: 45px; width: 847px; }
 
-#main .container .shop .shop_l .shop_l_b #carList { padding-top: -1px; }
+#main .container .shop .shop_l_b #carList { padding-top: -1px; }
 
-#main .container .shop .shop_l .shop_l_b #carList li { height: 205px; width: 847px; position: relative; padding: 20px 0px 20px 20px; border: 1px solid #ddd; border-top: none; border-bottom: 2px solid #ccc; }
+#main .container .shop .shop_l_b #carList li { height: 205px; width: 847px; position: relative; border: 1px solid #ddd; border-top: none; border-bottom: 2px solid #ccc; }
 
-#main .container .shop .shop_l .shop_l_b #carList img { margin: 47px 45px 47px 10px; display: block; width: 110px; height: 110px; float: left; }
+#main .container .shop .shop_l_b #carList img { margin: 47px 45px 47px 10px; display: block; width: 110px; height: 110px; float: left; }
 
-#main .container .shop .shop_l .shop_l_b .jj_div1 { float: left; }
+#main .container .shop .shop_l_b .jj_div1 { float: left; }
 
-#main .container .shop .shop_l .shop_l_b .price span::before, #main .container .shop .shop_l .shop_l_b .subPrice::before { content: 'Total：'; }
+#main .container .shop .shop_l_b .jj_div1 .jj_p1 { font-size: 14px; color: #35439C; padding-top: 32px; font-weight: bold; }
 
-#main .container .shop .shop_l .shop_l_b .btnClear { width: 150px; height: 30px; background: #ddd; border-radius: 5px; text-align: center; line-height: 30px; font-size: 14px; margin: 16px 28px 80px 0px; }
+#main .container .shop .shop_l_b .jj_div1 .jj_p2 { font-size: 10px; }
 
-#main .container .shop .shop_r .check1 { background: #679300; height: 34px; border-radius: 5px; margin-top: 24px; color: #fff; line-height: 34px; text-align: center; font-size: 12px; }
+#main .container .shop .shop_l_b .jj_div1 .jj_p3 { padding-top: 25px; font-size: 12px; margin-bottom: 6px; }
 
-#main .container .shop .shop_r .shop_r_c { border: 1px solid #DDDDDD; padding-top: 12px; height: 133px; padding-bottom: 25px; }
+#main .container .shop .shop_l_b .jj_div1 .jj_p4 span:first-child { display: inline-block; height: 30px; width: 54px; border: 1px solid #ccc; color: #333; border-radius: 5px; line-height: 30px; text-align: center; }
 
-#main .container .shop .shop_r .shop_r_c .sum1 { display: block; background: #F5F5F5; font-size: 16px; line-height: 42px; height: 42px; text-align: center; margin-bottom: 22px; }
+#main .container .shop .shop_l_b .jj_div1 .jj_p4 span:last-child { margin-left: 10px; height: 30px; width: 70px; background: #08439C; display: inline-block; border-radius: 5px; color: #fff; text-align: center; line-height: 30px; font-size: 12px; }
 
-#main .container .shop .shop_r .shop_r_c .sum2 { font-size: 12px; padding-left: 16px; }
+#main .container .shop .shop_l_b .jj_div1 .jj_p5 { color: #0059B2; font-size: 10px; padding-top: 17px; }
 
-#main .container .shop .shop_r .shop_r_c .sum3 { font-size: 12px; padding-left: 80px; }
+#main .container .shop .shop_l_b .jj_div2 { padding-left: 440px; }
 
-#main .container .shop .shop_r .shop_r_c .sum4 { font-size: 12px; padding-left: 200px; }
+#main .container .shop .shop_l_b .jj_div2 .jj_name { color: #999999; font-size: 14px; font-weight: bold; padding-top: 32px; padding-bottom: 15px; margin-right: 180px; border-bottom: 1px solid #ddd; }
 
-#main .container .shop .shop_r .check2 { background: #679300; height: 34px; border-radius: 5px; margin-top: 12px; color: #fff; line-height: 34px; text-align: center; font-size: 12px; }
+#main .container .shop .shop_l_b .jj_div2 .jj_price { font-size: 13px; color: #333333; padding-top: 25px; font-weight: bold; }
 
-#main .container .shop .shop_r { height: 490px; width: 263px; }
+#main .container .shop .shop_l_b .btn-close { position: absolute; top: 12px; right: 14px; width: 20px; height: 20px; display: block; text-align: center; line-height: 20px; }
 
-#main .container .app { height: 469px; }
+#main .container .shop .shop_l_b .btn-close:hover { background: #08439C; color: #fff; }
 
-#main .container .app .app_p1 { font-size: 14px; padding-top: 40px; font-weight: bold; }
+#main .container .shop .shop_l_b .total { float: right; margin: 20px 30px 0px 0px; font-size: 16px; font-weight: bold; color: #08439C; }
 
-#main .container .app .app_p2 .s1 { width: 174px; margin-top: 20px; height: 35px; border: 1px solid #ddd; border-radius: 5px; display: inline-block; margin-right: 12px; }
+#main .container .shop .shop_l_b .btnClear { width: 150px; height: 30px; background: #ddd; border-radius: 5px; text-align: center; line-height: 30px; font-size: 14px; margin: 25px 28px 80px 0px; float: left; }
 
-#main .container .app .app_p2 .s2 { margin-top: 10px; width: 58px; height: 35px; line-height: 35px; border: 1px solid #ddd; background: #777; text-align: center; color: #fff; display: inline-block; border-radius: 5px; font-size: 10px; }
+#main .container .shop_r .check1 { background: #679300; height: 34px; border-radius: 5px; margin-top: 24px; color: #fff; line-height: 34px; text-align: center; font-size: 12px; }
 
-#main .container .app .app_p3 { font-size: 10px; margin-top: 12px; }
+#main .container .shop_r .shop_r_c { border: 1px solid #DDDDDD; padding-top: 12px; height: 133px; padding-bottom: 25px; }
 
-#main .container .app .app_p4 { font-size: 10px; margin-top: 7px; }
+#main .container .shop_r .shop_r_c .sum1 { display: block; background: #F5F5F5; font-size: 16px; line-height: 42px; height: 42px; text-align: center; margin-bottom: 22px; }
 
-#main .container .app .app_p5 { font-size: 12px; margin-top: 40px; color: #150000; font-weight: bold; }
+#main .container .shop_r .shop_r_c .sum2 { font-size: 12px; padding-left: 16px; }
 
-#main .container .app .app_p6 { font-size: 12px; margin-top: 12px; }
+#main .container .shop_r .shop_r_c .sum3 { font-size: 12px; padding-left: 80px; }
 
-#main .container .app .app_p7 { margin-top: 25px; font-size: 14px; font-weight: bold; }
+#main .container .shop_r .shop_r_c .sum4 { font-size: 12px; padding-left: 200px; }
 
-#main .container .app .app_p8 { font-size: 12px; margin-top: 12px; }
+#main .container .shop_r .check2 { background: #679300; height: 34px; border-radius: 5px; margin-top: 12px; color: #fff; line-height: 34px; text-align: center; font-size: 12px; }
 
-#main .container .app .app_p9 { margin-top: 120x; font-size: 10px; }
+#main .container .shop_r { height: 490px; width: 263px; }
 
-#main .container .app .app_p10 { font-size: 10px; margin-top: 10px; color: #24A5D8; }
+#main .app { height: 469px; }
 
-#main .container .app .app_p11 { font-size: 10px; margin-top: 10px; }
+#main .app .app_p1 { font-size: 14px; padding-top: 40px; font-weight: bold; }
 
-#main .container .bou { height: 749px; }
+#main .app .app_p2 .s1 { width: 174px; margin-top: 20px; height: 35px; border: 1px solid #ddd; border-radius: 5px; display: inline-block; margin-right: 12px; }
 
-#main .container .bou .j_Best .Best_p { line-height: 50px; font-weight: bold; border-bottom: 2px solid #464637; margin: 0px 0px 0px 0px; }
+#main .app .app_p2 .s2 { margin-top: 10px; width: 58px; height: 35px; line-height: 35px; border: 1px solid #ddd; background: #777; text-align: center; color: #fff; display: inline-block; border-radius: 5px; font-size: 10px; }
 
-#main .container .bou .j_Best .Best_c { width: 1120px; height: 310px; overflow: hidden; }
+#main .app .app_p3 { font-size: 10px; margin-top: 12px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul { padding-left: 20px; width: 2240px; }
+#main .app .app_p4 { font-size: 10px; margin-top: 7px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li { float: left; }
+#main .app .app_p5 { font-size: 12px; margin-top: 40px; color: #150000; font-weight: bold; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li img { display: block; width: 120px; height: 120px; margin: 30px 22px 0px 0px; }
+#main .app .app_p6 { font-size: 12px; margin-top: 12px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .img_last { display: block; width: 120px; height: 120px; margin: 30px 0px 0px 5px; }
+#main .app .app_p7 { margin-top: 25px; font-size: 14px; font-weight: bold; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li p { font-size: 8px; }
+#main .app .app_p8 { font-size: 12px; margin-top: 12px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .Best_ul_p1 { font-size: 11px; font-weight: bold; line-height: 30px; padding-top: 10px; }
+#main .app .app_p9 { margin-top: 120x; font-size: 10px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li p:nth-child(5) { margin-top: 15px; }
+#main .app .app_p10 { font-size: 10px; margin-top: 10px; color: #24A5D8; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .Best_ul_p5 { color: #AF0000; }
+#main .app .app_p11 { font-size: 10px; margin-top: 10px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .p_last { position: relative; }
+#main .bou { height: 749px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .p_last i { position: absolute; color: #303030; font-size: 18px; }
+#main .bou .j_Best .Best_p { line-height: 50px; font-weight: bold; border-bottom: 2px solid #464637; margin: 0px 0px 0px 0px; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .p_last .Best_c_i1 { top: 3px; left: 83px; font-weight: bold; }
+#main .bou .j_Best .Best_c { width: 1120px; height: 310px; overflow: hidden; }
 
-#main .container .bou .j_Best .Best_c .Best_ul li .p_last .Best_c_i2 { top: 3px; left: 108px; }
+#main .bou .j_Best .Best_c .Best_ul { padding-left: 20px; width: 2240px; }
+
+#main .bou .j_Best .Best_c .Best_ul li { float: left; }
+
+#main .bou .j_Best .Best_c .Best_ul li img { display: block; width: 120px; height: 120px; margin: 30px 22px 0px 0px; }
+
+#main .bou .j_Best .Best_c .Best_ul li .img_last { display: block; width: 120px; height: 120px; margin: 30px 0px 0px 5px; }
+
+#main .bou .j_Best .Best_c .Best_ul li p { font-size: 8px; }
+
+#main .bou .j_Best .Best_c .Best_ul li .Best_ul_p1 { font-size: 11px; font-weight: bold; line-height: 30px; padding-top: 10px; }
+
+#main .bou .j_Best .Best_c .Best_ul li p:nth-child(5) { margin-top: 15px; }
+
+#main .bou .j_Best .Best_c .Best_ul li .Best_ul_p5 { color: #AF0000; }
+
+#main .bou .j_Best .Best_c .Best_ul li .p_last { position: relative; }
+
+#main .bou .j_Best .Best_c .Best_ul li .p_last i { position: absolute; color: #303030; font-size: 18px; }
+
+#main .bou .j_Best .Best_c .Best_ul li .p_last .Best_c_i1 { top: 3px; left: 83px; font-weight: bold; }
+
+#main .bou .j_Best .Best_c .Best_ul li .p_last .Best_c_i2 { top: 3px; left: 108px; }

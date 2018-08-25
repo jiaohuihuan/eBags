@@ -2,14 +2,9 @@
     .container{
         width: 1140px;
         .shop{
-            // background: pink;
-            // height: 490px;
-            .shop_l{
                 width: 877px;
-                // height: 490px;
-                // background: #eee;
+
                 .shop_l_t{
-                    // height: 79px;
                     color:#3871AA;
                     padding-top: 40px;
                     padding-left: 737px;
@@ -18,8 +13,6 @@
                 }
                 .shop_l_c{
                     background: #F5F5F5;
-                    // height: 45px;
-                    // width: 847px;
                     border:1px solid #ddd;
                     color:#333333;
                     font-size: 18px;
@@ -28,92 +21,7 @@
                     width: 847px;
                 }
                 .shop_l_b{
-                    // .good{
-                    //     position:relative;
-                    //     .btn-close{
-                    //         position:absolute;
-                    //         top: 26px;
-                    //         right: 18px;
-                    //     }
-                    //     width: 847px;
-                    //     // height: 205px;
-                    //     border-bottom:1px solid #999999;
-                    //     border-right:1px solid #DDDDDD;
-                    //     border-left:1px solid #DDDDDD;
-                    //     // background: skyblue;
-                    //     .good_l{
-                    //         width: 156px;
-                    //         text-align: center;
-                    //         padding-top:40px;
-                    //         // height: 204px;
-                    //         img{
-                    //             width: 110px;
-                    //         }
-                    //     }
-                    //     .good_c{
-                    //         .c_p1{
-                    //             color:#08439C;
-                    //             font-size: 14px;
-                    //             padding: 32px 77px 0px 0px;
-                    //         }
-                    //         .c_p2{
-                    //             font-size: 10px;
-                    //             color:#574674;
-                    //             padding-bottom: 23px;
-                    //         }
-                    //         .c_p3{
-                    //             font-size: 12px;
-                    //             padding-right: 227px;
-                    //             color:#473333;
-                    //             font-weight: bold;
-                    //             padding-bottom: 8px;
-                    //         }
-                    //         .c_p4{
-                    //             padding-bottom: 23px;
-                    //             .c_s1{
-                    //                 display:inline-block;
-                    //                 width: 54px;
-                    //                 height: 34px;
-                    //                 border:1px solid #ddd;
-                    //                 border-radius:5px;
-                    //                 font-size: 12px;
-                    //                 line-height: 32px;
-                    //                 text-align: center;
-                    //             }
-                    //             .c_s2{
-                    //                 display:inline-block;
-                    //                 width: 68px;
-                    //                 // height: 34px;
-                    //                 color:#fff;
-                    //                 font-size: 12px;
-                    //                 line-height: 34px;
-                    //                 text-align: center;
-                    //                 border-radius:5px;
-                    //                 background: #08439C;
-                    //                 margin-left: 8px;
-                    //             }
-                    //         }
-                    //         .c_p5{
-                    //             color:#1C4A9C;
-                    //             font-size: 10px;
-                    //             padding-bottom: 22px;
-                    //         }
-                    //     }
-                    //     .good_r{
-                    //         .r_p1{
-                    //             font-size: 10px;
-                    //             color:#A19F9C;
-                    //             padding: 32px 0px 15px 0px;
-                    //             border-bottom:1px solid #ccc;
-                    //         }
-                    //         .r_p2{
-                    //             font-size: 14px;
-                    //             color:#333333;
-                    //             padding-top: 29px;
-                    //             font-weight: bold;
-                    //         }
-                    //     }
-                    // }
+                   
                     
                     
                     // 购物车代码——————————————————————————————————————————
@@ -126,7 +34,6 @@
                         height: 205px;  
                         width: 847px;
                         position:relative;
-                        padding: 20px 0px 20px 20px;
                         border:1px solid #ddd;
                         border-top:none;
                         border-bottom:2px solid #ccc;
@@ -141,26 +48,90 @@
                     }
                     .jj_div1{
                         float:left;
+                        .jj_p1{
+                            font-size: 14px;
+                            color:#35439C;padding-top: 32px;
+                            font-weight: bold;
+                        }
+                        .jj_p2{
+                            font-size: 10px;
+                        }
+                        .jj_p3{
+                            padding-top: 25px;
+                            font-size: 12px;
+                            margin-bottom: 6px;
+                        }
+                        .jj_p4{
+                            span:first-child{
+                                display:inline-block;
+                                height: 30px;
+                                width: 54px;
+                                border:1px solid #ccc;
+                                color:#333;
+                                border-radius:5px;
+                                line-height: 30px;
+                                text-align: center;
+                            }
+                            span:last-child{
+                                margin-left: 10px;
+                                height: 30px;
+                                width: 70px;
+                                background: #08439C;
+                                display:inline-block;
+                                border-radius:5px;
+                                color:#fff;
+                                text-align: center;
+                                line-height: 30px;
+                                font-size: 12px;
+                            }
+                        }
+                        .jj_p5{
+                            color:#0059B2;
+                            font-size: 10px;
+                            padding-top: 17px;
+                        }
                     }
-                    
-                    
+                    .jj_div2{
+                        padding-left: 440px;
+                        .jj_name{
+                            color:#999999;
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding-top: 32px;
+                            padding-bottom: 15px;
+                            margin-right: 180px;
+                            border-bottom:1px solid #ddd;
+                        }
+                        .jj_price{
+                            font-size: 13px;
+                            color:#333333;
+                            padding-top: 25px;
+                            font-weight: bold;
 
-
-
-
-
-
-
-
-
-
-
-
-                    .price span::before,.subPrice::before{
-                        content:'Total：';
+                        }
                     }
-                    
-
+                    .btn-close{
+                        position:absolute;
+                        top:12px;
+                        right:14px;
+                        width: 20px;
+                        height: 20px;
+                        display:block;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    .btn-close:hover{
+                        background: #08439C;
+                        color:#fff;
+                    }
+                    .total{
+                        float:right;
+                        margin: 20px 30px 0px 0px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color:#08439C;
+                    }
+ 
                     .btnClear{
                         width: 150px;
                         height: 30px;
@@ -169,7 +140,8 @@
                         text-align: center;
                         line-height: 30px;
                         font-size: 14px;
-                        margin:16px 28px 80px 0px;
+                        margin:25px 28px 80px 0px;
+                       float:left;
                     }
 
 
@@ -407,5 +379,4 @@
 
             }
         }
-    }
 }

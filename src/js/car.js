@@ -95,22 +95,13 @@
 
         
 
-
-                // return `<li data-guid="${goods.guid}">
-                //         <img class="showimg" src="${goods.imgurl}"/>
-                //         <h4>${goods.name}</h4>
-                //         <p class="price"><span>${goods.price}</span> &times;${goods.qty}</p>
-                //         <span class="btn-close">&times;</span>
-                // </li>`;
-
-
                 return `<li data-guid="${goods.guid}">
                     <img class="showimg" src="${goods.imgurl}"/>
                     <div class="jj_div1">
                         <p class="jj_p1" >eBags-Packing Cubes-3pc Set</p>
                         <p class="jj_p2" >Color: </p>
                         <p class="jj_p3" >Quantity:</p>
-                        <p class="jj_p4" ><span>${goods.qty}</span>Update</p>
+                        <p class="jj_p4" ><span>${goods.qty}</span><span>Update</span></p>
                         <p class="jj_p5" >Remove | Add to Favorites</p>
                     </div>
                     <div class="jj_div2">
