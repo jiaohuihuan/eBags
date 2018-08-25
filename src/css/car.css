@@ -1,7 +1,5 @@
 #main .container { width: 1140px; }
 
-#main .container .shop { width: 877px; }
-
 #main .container .shop .shop_l_t { color: #3871AA; padding-top: 40px; padding-left: 737px; font-size: 12px; padding-bottom: 10px; }
 
 #main .container .shop .shop_l_c { background: #F5F5F5; border: 1px solid #ddd; color: #333333; font-size: 18px; padding-left: 18px; line-height: 45px; width: 847px; }
@@ -32,9 +30,9 @@
 
 #main .container .shop .shop_l_b .jj_div2 .jj_price { font-size: 13px; color: #333333; padding-top: 25px; font-weight: bold; }
 
-#main .container .shop .shop_l_b .btn-close { position: absolute; top: 12px; right: 14px; width: 20px; height: 20px; display: block; text-align: center; line-height: 20px; }
+#main .container .shop .shop_l_b .btnClose { position: absolute; top: 12px; right: 14px; width: 20px; height: 20px; display: block; text-align: center; line-height: 20px; }
 
-#main .container .shop .shop_l_b .btn-close:hover { background: #08439C; color: #fff; }
+#main .container .shop .shop_l_b .btnClose:hover { background: #A52325; color: #fff; }
 
 #main .container .shop .shop_l_b .total { float: right; margin: 20px 30px 0px 0px; font-size: 16px; font-weight: bold; color: #08439C; }
 

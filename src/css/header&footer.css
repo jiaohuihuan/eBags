@@ -22,7 +22,7 @@ a:hover { text-decoration: underline; }
 
 .j_header .j_search .i2 { position: absolute; left: 1155px; top: 46px; color: #002253; }
 
-.j_header .j_search .car { display: block; width: 66px; height: 46px; border: 1px solid #2F1C60; position: absolute; right: 35px; top: 23px; color: #002253; border-radius: 5px; }
+.j_header .j_search .car { display: block; width: 66px; height: 46px; border: 1px solid #2F1C60; position: absolute; right: 27px; top: 23px; color: #002253; border-radius: 5px; }
 
 .j_header .j_search .car .car_0 { position: absolute; top: 13px; left: 30px; font-size: 10px; }
 

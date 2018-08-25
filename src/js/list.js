@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             // 在次获取数据：responseText
             var data = JSON.parse(xhr.responseText);
 
+            // console.log(data);
+                 
+
 
 
             // 获取元素
@@ -39,7 +42,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 jiegou(data);
 
 
- 
 
 
                 //点击价格排序（重置页面）

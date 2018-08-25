@@ -2,8 +2,6 @@
     .container{
         width: 1140px;
         .shop{
-                width: 877px;
-
                 .shop_l_t{
                     color:#3871AA;
                     padding-top: 40px;
@@ -110,7 +108,7 @@
 
                         }
                     }
-                    .btn-close{
+                    .btnClose{
                         position:absolute;
                         top:12px;
                         right:14px;
@@ -120,8 +118,8 @@
                         text-align: center;
                         line-height: 20px;
                     }
-                    .btn-close:hover{
-                        background: #08439C;
+                    .btnClose:hover{
+                        background: #A52325;
                         color:#fff;
                     }
                     .total{
@@ -163,7 +161,8 @@
                 .shop_r_c{
                     border:1px solid #DDDDDD;
                     padding-top: 12px;
-                    height: 133px;padding-bottom: 25px;
+                    height: 133px;
+                    padding-bottom: 25px;
                     .sum1{
                         display:block;
                         background: #F5F5F5;

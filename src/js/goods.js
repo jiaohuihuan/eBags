@@ -108,6 +108,21 @@
             // 点击添加购物车
             c_btn.onclick=function(){
 
+
+                // jquery动画飞入购物车
+                $('<img>').attr({
+                    src:'../img/list/'+dataimg
+                }).css({width:200,height:200,position:'absolute',left:269,top:67}).appendTo($('body')).animate({
+                            left:$('body').outerWidth(),
+                            height:20,
+                            width:20
+                        },1000,function(){
+                            $(this).remove()
+                        })   
+                
+
+                
+
                 //获取商品信息
                 var goods = {
                     
@@ -125,9 +140,7 @@
                 //写入cookie
                 document.cookie = 'goodslist=' + JSON.stringify(goodslist);
 
-                // 跳转到购物车
-                location.href = 'car.html';
-
+                
             };
            
 // -------------------------商品添加到购物车———————————————————————
@@ -144,3 +157,8 @@
 
 
 });
+
+
+
+
+

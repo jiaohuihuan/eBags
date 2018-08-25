@@ -35,6 +35,7 @@
         // 清空购物车
         // 删除goodslist这个cookie
         btnClear.onclick = function(e){
+
             // 清空cookie
             Cookie.remove('goodslist');
 
@@ -45,41 +46,56 @@
 
 
             e.preventDefault();
-
-            // 手动刷新页面
-            // location.reload()
         }
+
+
+        btnClear.onmousemove = function(){
+            btnClear.style.backgroundColor = '#A52325';
+            btnClear.style.color = '#fff';
+
+        }
+
+        btnClear.onmouseout = function(){
+            btnClear.style.backgroundColor = '#ddd';
+            btnClear.style.color = '#000';
+        }
+
+
+
+
 
         // 删除单个商品
         // * 找出删除的商品 -> 从数组中移除 -> 重写cookie -> 渲染页面
-        oCarList.onclick = function(e){
-            e = e || window.event;
+        
+        // 删除单个商品原生js方法————————————————————————————
+        var btn=document.getElementsByClassName('btnClose')
+        for(let i=0;i<btn.length;i++){
+            btn[i].onclick=function(){
 
-            var target = e.target || e.srcElement;
-
-            // 判断是否点击了按钮
-            if(target.className === 'btn-close'){
-                // 获取当前li
-                var currentLi = target.parentNode;
-
-                // 获取当前商品的guid
-                var guid = currentLi.getAttribute('data-guid');
-
-                // 找出数组中对应商品并移除
-                for(var i=0;i<goodslist.length;i++){
-                    if(goodslist[i].guid === guid){
-                        goodslist.splice(i,1);
-                        break;
-                    }
-                }
-
-                // 重写cookie
+                goodslist.splice(i,1);
                 Cookie.set('goodslist',JSON.stringify(goodslist));
-
-                // 重新渲染页面
                 render();
+
+
             }
         }
+
+
+
+        // 删除单个商品jquery方法——————————————————————————————————
+       // $('#carList ul li').on('click',function(e){
+       //      if(e.target.className==='btnClose'){
+       //       goodslist.splice($(this).index(),1);
+       //       Cookie.set('goodslist',JSON.stringify(goodslist));
+       //      render();
+       //   }
+           
+       // })
+
+
+
+
+
 
         function render(){
 
@@ -95,7 +111,7 @@
 
         
 
-                return `<li data-guid="${goods.guid}">
+                return `<li>
                     <img class="showimg" src="${goods.imgurl}"/>
                     <div class="jj_div1">
                         <p class="jj_p1" >eBags-Packing Cubes-3pc Set</p>
@@ -108,7 +124,7 @@
                         <h4 class="jj_name" >${goods.name}</h4>
                         <p class="jj_price">item Price <span>${goods.price}</span> &times;${goods.qty}</p>
                     </div>
-                    <span class="btn-close">&times;</span>
+                    <span class="btnClose">&times;</span>
                 </li>`;
 
 
