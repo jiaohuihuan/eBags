@@ -16,8 +16,10 @@
                     * 删除单个商品
          */
         var oCarList = document.getElementById('carList');
-        var oSubPrice = oCarList.nextElementSibling;
-        var btnClear = document.getElementById('btnClear');
+        var oSubPrice = document.querySelector('.subPrice');
+        var btnClear = document.querySelector('.btnClear');
+
+             
 
         var goodslist = Cookie.get('goodslist');//'[{}]',''
 
@@ -91,12 +93,37 @@
                 // 计算总价
                 total += goods.price * goods.qty;
 
-                return '<li data-guid="'+goods.guid+'">' + 
-                        '<img src="'+goods.imgurl+'"/>' + 
-                        '<h4>'+goods.name+'</h4>' + 
-                        '<p class="price">价格：<span>'+goods.price+'</span> &times; '+goods.qty+'</p>' + 
-                        '<span class="btn-close">&times;</span>'
-                '</li>';
+        
+
+
+                // return `<li data-guid="${goods.guid}">
+                //         <img class="showimg" src="${goods.imgurl}"/>
+                //         <h4>${goods.name}</h4>
+                //         <p class="price"><span>${goods.price}</span> &times;${goods.qty}</p>
+                //         <span class="btn-close">&times;</span>
+                // </li>`;
+
+
+                return `<li data-guid="${goods.guid}">
+                    <img class="showimg" src="${goods.imgurl}"/>
+                    <div class="jj_div1">
+                        <p class="jj_p1" >eBags-Packing Cubes-3pc Set</p>
+                        <p class="jj_p2" >Color: </p>
+                        <p class="jj_p3" >Quantity:</p>
+                        <p class="jj_p4" ><span>${goods.qty}</span>Update</p>
+                        <p class="jj_p5" >Remove | Add to Favorites</p>
+                    </div>
+                    <div class="jj_div2">
+                        <h4 class="jj_name" >${goods.name}</h4>
+                        <p class="jj_price">item Price <span>${goods.price}</span> &times;${goods.qty}</p>
+                    </div>
+                    <span class="btn-close">&times;</span>
+                </li>`;
+
+
+
+
+
             }).join('\n');
 
             // 把ul写入页面#carList
