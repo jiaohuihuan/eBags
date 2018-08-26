@@ -1,5 +1,7 @@
 #main .container { width: 1140px; }
 
+#main .container a { text-decoration: none; }
+
 #main .container .shop .shop_l_t { color: #3871AA; padding-top: 40px; padding-left: 737px; font-size: 12px; padding-bottom: 10px; }
 
 #main .container .shop .shop_l_c { background: #F5F5F5; border: 1px solid #ddd; color: #333333; font-size: 18px; padding-left: 18px; line-height: 45px; width: 847px; }

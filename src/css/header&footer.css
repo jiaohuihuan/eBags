@@ -20,6 +20,8 @@ a:hover { text-decoration: underline; }
 
 .j_header .j_search .i1 { position: absolute; left: 557px; top: 31px; color: #ccc; font-size: 25px; }
 
+.j_header .j_search .index { position: absolute; left: 984px; top: 48px; font-size: 12px; color: #006DD9; }
+
 .j_header .j_search .order1 { position: absolute; left: 1042px; top: 48px; font-size: 12px; color: #006DD9; }
 
 .j_header .j_search .order2 { position: absolute; left: 1108px; top: 48px; font-size: 12px; color: #006DD9; }

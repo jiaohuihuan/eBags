@@ -10,6 +10,21 @@
             location.href = 'car.html';
                  
             })
+
+              var goodslist = Cookie.get('goodslist');
+            
+           
+            
+            if(goodslist!= ''){
+                //如果goodslist得到一个空字符串变成空数组
+                 goodslist = JSON.parse(goodslist);
+
+            }else{
+                //如果goodslist得到一个json字符串变成数组
+               
+                 goodslist = [];
+            }
+             $(".car_0").text(goodslist.length);
         }); 
 
        
@@ -86,11 +101,8 @@
                 Cookie.set('goodslist',JSON.stringify(goodslist));
 
                 e.target.parentNode.remove();
-
-
-                 // console.log(e.target);
                      
-                // render();
+                render();
 
             }
         }

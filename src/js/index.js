@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-19 11:52:49
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-26 13:03:19
+* @Last Modified time: 2018-08-26 16:38:32
 */
 
 
@@ -11,7 +11,7 @@
 
     jQuery(function($){
 
-        // $('#j_header').load('html/header&footer.html .j_header');
+
         $('#j_footer').load('html/header&footer.html .j_footer');
     })
 

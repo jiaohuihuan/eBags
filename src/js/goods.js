@@ -8,8 +8,24 @@
             
             // 跳转到购物车
             location.href = 'car.html';
+
                  
             })
+             var goodslist = Cookie.get('goodslist');
+            
+           
+            
+            if(goodslist!= ''){
+                //如果goodslist得到一个空字符串变成空数组
+                 goodslist = JSON.parse(goodslist);
+
+            }else{
+                //如果goodslist得到一个json字符串变成数组
+               
+                 goodslist = [];
+            }
+             $(".car_0").text(goodslist.length);
+
         }); 
 
        
@@ -55,6 +71,21 @@
     // console.log('传过来的参数是:', obj.id);
 
 
+    var goodslist = Cookie.get('goodslist');//'[{},{}]' /[]
+            
+           
+            
+            if(goodslist!= ''){
+                //如果goodslist得到一个空字符串变成空数组
+                 goodslist = JSON.parse(goodslist);
+
+            }else{
+                //如果goodslist得到一个json字符串变成数组
+               
+                 goodslist = [];
+            }
+
+
     var id = obj.id;
     // console.log(id)
          
@@ -98,19 +129,7 @@
 
             var c_btn = document.querySelector('.add');
 
-            var goodslist = Cookie.get('goodslist');//'[{},{}]' /[]
             
-           
-            
-            if(goodslist!= ''){
-                //如果goodslist得到一个空字符串变成空数组
-                 goodslist = JSON.parse(goodslist);
-
-            }else{
-                //如果goodslist得到一个json字符串变成数组
-               
-                 goodslist = [];
-            }
             
             var qty=1;
             $('.num').on('change',function(){
@@ -178,7 +197,8 @@
     xhr.open('get','../api/goods.php?id='+id,true);
 
     xhr.send();
-
+console.log(goodslist)
+     
 
 
 });

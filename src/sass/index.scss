@@ -23,6 +23,10 @@ h3{font-size:map-get($headings,h3)}
 
 
 .j_header{
+    a{
+        text-decoration:none;
+        color:#111;
+    }
     .j_china{
         height:30px;
         width: 100%;

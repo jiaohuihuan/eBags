@@ -32,7 +32,36 @@ document.addEventListener('DOMContentLoaded',()=>{
     // console.log(email,password,btnLogin); 
 
 
+    // email.onclick = function(){
+    //     email.style.borderColor = '#039B9F';
+
+    // }
     
+
+     
+    email.onfocus = function(){
+        email.style.borderColor = '#006DD9';
+
+    }
+
+    email.onblur = function(){
+        email.style.borderColor = '#ccc';
+
+    }
+
+
+
+     
+    password.onfocus = function(){
+        password.style.borderColor = '#006DD9';
+
+    }
+
+    password.onblur = function(){
+        password.style.borderColor = '#ccc';
+
+    }
+
 
     btnLogin.onmousedown = ()=>{
         btnLogin.style.background = "#143D8D";

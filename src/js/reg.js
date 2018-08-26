@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         let area = document.querySelector('#area');
 
 
+
         // 获取输入的值
         let _email = email.value;
         let _name = name.value;

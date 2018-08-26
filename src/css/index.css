@@ -14,6 +14,8 @@ h5 { font-size: 18px; color: #444460; }
 
 h6 { font-size: 12px; color: #444460; }
 
+.j_header a { text-decoration: none; color: #111; }
+
 .j_header .j_china { height: 30px; width: 100%; background: #EEEEEE; }
 
 .j_header .j_china .img1 { padding: 5px 0px 5px 1200px; }
