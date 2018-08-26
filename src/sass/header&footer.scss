@@ -21,6 +21,12 @@ $padding-left:35px;
 
 //使用
 .j_header{
+    a{
+        color:#111;
+    }
+    a:hover{
+        color:#0059B2;
+    }
     .j_china{
         height:30px;
         width: 100%;
@@ -171,9 +177,13 @@ $padding-left:35px;
             .sale{
                 color:#D90000;
             }
+            .sale:hover{
+                color:#0059B2;
+            }
 
         }
     }
+
 }
 
 

@@ -1,12 +1,16 @@
 
 
-document.addEventListener('DOMContentLoaded',function(){
-    var car = document.querySelector('.car');
-    car.onclick = function(){
+;(function(){
 
-        // 跳转到购物车
-        location.href = 'car.html';
-        
-    }
-         
-})
+    jQuery(function($){
+
+       $(".car").on("click",function(){
+            
+          // 跳转到购物车
+            location.href = 'car.html';
+                 
+        })
+
+    })
+
+})();

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-19 11:52:49
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-22 11:38:07
+* @Last Modified time: 2018-08-26 10:32:50
 */
 
 
@@ -19,10 +19,13 @@
 
 
 
+    
+
 
 // 轮播图
 ;document.addEventListener('DOMContentLoaded',()=>{
-            
+
+
             
     let banner = document.getElementsByClassName('banner')[0];
     let ul = banner.children[0];
@@ -129,19 +132,36 @@
         }
     }
 
+// ____________________轮播图完成——————————————————————————
 
 
 
 
 
-    // 点击切换商品
-    // var Best_l = document.querySelector('.Best_l');
-    // var Best_r = document.querySelector('.Best_r');
-    // var Best_ul = document.querySelector('.Best_ul');
 
-    // Best_l.onclick = function(){
-    //         Best_ul.style.left = -1120 + 'px';
+
+    // var lis = document.querySelectorAll('li');   
+    
+    // for(let i=0;i<=lis.length;i++){  
+
+    //     lis[i].onclick = function(){    
+
+        
+    //         // 跳转到list.html
+    //         location.href = ''html/list.html'';
+    //     }
+
     // }
+
+
+    
+    var car = document.querySelector('.car');   console.log(car);
+         
+    car.onclick = function(){ 
+        // 跳转到car.html
+        location.href = 'html/car.html';  
+    }
+
 
 
 });

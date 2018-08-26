@@ -3,7 +3,8 @@
 
     jQuery(function($){
 
-        $('#j_header').load('../html/header&footer.html .j_header');
+        $('#j_header').load('../html/header&footer.html .j_header'); 
+
         $('#j_footer').load('../html/header&footer.html .j_footer');
 
 
@@ -46,6 +47,8 @@
 
 
     var id = obj.id;
+    // console.log(id)
+         
     
 
     var xhr = new XMLHttpRequest();
@@ -63,7 +66,7 @@
             var dataimg = data[0].imgurl;
             var dataname = data[0].name;
             var dataprice = data[0].price;
-            // console.log(dataimg);
+            // console.log(dataimg,dataname,dataprice);
 
 
             // 获取页面元素
@@ -112,11 +115,11 @@
                 // jquery动画飞入购物车
                 $('<img>').attr({
                     src:'../img/list/'+dataimg
-                }).css({width:200,height:200,position:'absolute',left:269,top:67}).appendTo($('body')).animate({
+                }).css({width:450,height:450,position:'absolute',left:269,top:67}).appendTo($('body')).animate({
                             left:$('body').outerWidth(),
                             height:20,
                             width:20
-                        },1000,function(){
+                        },1300,function(){
                             $(this).remove()
                         })   
                 
@@ -132,7 +135,7 @@
                     qty:qty
                 }
                
-                console.log(goods);
+                // console.log(goods);
                 
                  //添加商品到数组
                 goodslist.push(goods);
