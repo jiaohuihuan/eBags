@@ -4,7 +4,17 @@
 
     jQuery(function($){
 
-        $('#j_header').load('../html/header&footer.html .j_header'); 
+        $('#j_header').load('../html/header&footer.html .j_header',function(){
+             $(".car").on("click",function(){
+            
+            // 跳转到购物车
+            location.href = 'car.html';
+                 
+            })
+        }); 
+
+       
+
         $('#j_footer').load('../html/header&footer.html .j_footer');
     })
 

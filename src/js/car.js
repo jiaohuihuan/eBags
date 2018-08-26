@@ -3,7 +3,17 @@
 
     jQuery(function($){
 
-        $('#j_header').load('../html/header&footer.html .j_header');   
+        $('#j_header').load('../html/header&footer.html .j_header',function(){
+             $(".car").on("click",function(){
+            
+            // 跳转到购物车
+            location.href = 'car.html';
+                 
+            })
+        }); 
+
+       
+
         $('#j_footer').load('../html/header&footer.html .j_footer');
 
 
@@ -15,7 +25,7 @@
                     * 清除所有商品
                     * 删除单个商品
          */
-        var oCarList = document.getElementById('carList');
+        var oCarList = document.querySelector('#carList');
         var oSubPrice = document.querySelector('.subPrice');
         var btnClear = document.querySelector('.btnClear');
 
@@ -70,12 +80,17 @@
         // 删除单个商品原生js方法————————————————————————————
         var btn=document.getElementsByClassName('btnClose')
         for(let i=0;i<btn.length;i++){
-            btn[i].onclick=function(){
+            btn[i].onclick=function(e){
 
                 goodslist.splice(i,1);
                 Cookie.set('goodslist',JSON.stringify(goodslist));
-                render();
 
+                e.target.parentNode.remove();
+
+
+                 // console.log(e.target);
+                     
+                // render();
 
             }
         }

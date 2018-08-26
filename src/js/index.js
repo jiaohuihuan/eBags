@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-08-19 11:52:49
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-08-26 10:32:50
+* @Last Modified time: 2018-08-26 13:03:19
 */
 
 
@@ -140,24 +140,10 @@
 
 
 
-    // var lis = document.querySelectorAll('li');   
     
-    // for(let i=0;i<=lis.length;i++){  
-
-    //     lis[i].onclick = function(){    
-
-        
-    //         // 跳转到list.html
-    //         location.href = ''html/list.html'';
-    //     }
-
-    // }
-
-
-    
-    var car = document.querySelector('.car');   console.log(car);
-         
+    var car = document.querySelector('.car');  
     car.onclick = function(){ 
+        console.log(5656)
         // 跳转到car.html
         location.href = 'html/car.html';  
     }

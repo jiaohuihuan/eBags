@@ -3,7 +3,16 @@
 
     jQuery(function($){
 
-        $('#j_header').load('../html/header&footer.html .j_header'); 
+        $('#j_header').load('../html/header&footer.html .j_header',function(){
+             $(".car").on("click",function(){
+            
+            // 跳转到购物车
+            location.href = 'car.html';
+                 
+            })
+        }); 
+
+       
 
         $('#j_footer').load('../html/header&footer.html .j_footer');
 
@@ -106,7 +115,12 @@
             var qty=1;
             $('.num').on('change',function(){
                 qty = $(this).val()*1;
+
+                
             })
+
+            $(".car_0").text(goodslist.length);
+
 
             // 点击添加购物车
             c_btn.onclick=function(){
@@ -117,11 +131,19 @@
                     src:'../img/list/'+dataimg
                 }).css({width:450,height:450,position:'absolute',left:269,top:67}).appendTo($('body')).animate({
                             left:$('body').outerWidth(),
-                            height:20,
-                            width:20
+                            height:0,
+                            width:0
                         },1300,function(){
                             $(this).remove()
+
+                            //购物车图标添加数量文本
+                            $(".car_0").text(goodslist.length);
+
+                            
                         })   
+
+
+
                 
 
                 
