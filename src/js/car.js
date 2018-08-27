@@ -55,7 +55,7 @@
         }
 
 
-        render();
+        
 
         // 清空购物车
         // 删除goodslist这个cookie
@@ -93,19 +93,25 @@
         // * 找出删除的商品 -> 从数组中移除 -> 重写cookie -> 渲染页面
         
         // 删除单个商品原生js方法————————————————————————————
-        var btn=document.getElementsByClassName('btnClose')
-        for(let i=0;i<btn.length;i++){
-            btn[i].onclick=function(e){
+        // 
+        // 
+        // 
+        
+        function bindBtn(){
+            var btn=document.getElementsByClassName('btnClose');
 
-                goodslist.splice(i,1);
-                Cookie.set('goodslist',JSON.stringify(goodslist));
+                for(let i=0;i<btn.length;i++){
+                    btn[i].onclick=function(e){
+       
+                        goodslist.splice(i,1);
+                        Cookie.set('goodslist',JSON.stringify(goodslist));
 
-                e.target.parentNode.remove();
-                     
-                render();
-
-            }
+                        e.target.parentNode.remove();
+                        render();
+                    }
+                }
         }
+        
 
 
 
@@ -166,12 +172,17 @@
 
             // 写入总价
             oSubPrice.innerHTML = total.toFixed(2);
+
+
+            bindBtn();
         }
 
 
 
 //购物车列表生成以内————————————————————————————————————————————   
 
+
+    render();
         
     })
 
